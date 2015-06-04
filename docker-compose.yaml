@@ -1,0 +1,8 @@
+production:
+  command: npm start
+  build: .
+  ports:
+    - 8080
+  environment:
+    VIRTUAL_HOST: static
+    VIRTUAL_PORT: 80
