@@ -1,3 +1,1 @@
-FROM google/nodejs-runtime
-
-RUN npm start
+FROM node:0.10-onbuild

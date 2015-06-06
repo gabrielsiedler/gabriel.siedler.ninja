@@ -1,5 +1,5 @@
 static:
-  command: npm start
+  command: npm run start
   build: .
   ports:
-    - "8989:80"
+    - "0.0.0.0:8090:3000"
