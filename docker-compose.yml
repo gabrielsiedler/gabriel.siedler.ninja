@@ -2,7 +2,9 @@ static:
   command: npm run start
   build: .
   ports:
-    - "0.0.0.0:8090:3000"
+    - "8090:3000"
   environment:
     VIRTUAL_HOST: static-gabriel.siedler.ninja
     VIRTUAL_PORT: 3000
+  volumes:
+    - .:/usr/src/app

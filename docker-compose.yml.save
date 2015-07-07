@@ -1,5 +1,0 @@
-static:cho 
-  command: 'enpm start
-  build: .
-  ports:
-    - "8989:80"
