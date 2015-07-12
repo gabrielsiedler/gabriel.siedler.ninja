@@ -41,7 +41,19 @@ $(function() {
 
   adjustBackground();
 
-  $('#video').append('<source src="assets/ninja_final.mp4" type="video/mp4">');
+  var mp4Video = 'background';
+
+  if(window.innerWidth <= 480)
+    mp4Video = 'background-mobile';
+
+  var videos = [
+    '<source src="assets/' + mp4Video + '.mp4" type="video/mp4">',
+    '<source src="assets/background.ogv" type="video/ogv">',
+    '<source src="assets/background.webm" type="video/webm">'
+  ];
+
+  $('#video').append(videos.join('\n'));
+
   videoElement.addEventListener('loadeddata', function() {
     adjustBackground();
     videoElement.play();
