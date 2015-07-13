@@ -41,18 +41,18 @@ $(function() {
 
   adjustBackground();
 
-  var mp4Video = 'background';
+  var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 
-  if(window.innerWidth <= 480)
-    mp4Video = 'background-mobile';
+  //Showing just static image in mobiles
+  if (!isMobile) {
+    var videos = [
+      '<source src="assets/background.mp4" type="video/mp4">',
+      '<source src="assets/background.ogv" type="video/ogv">',
+      '<source src="assets/background.webm" type="video/webm">'
+    ];
 
-  var videos = [
-    '<source src="assets/' + mp4Video + '.mp4" type="video/mp4">',
-    '<source src="assets/background.ogv" type="video/ogv">',
-    '<source src="assets/background.webm" type="video/webm">'
-  ];
-
-  $('#video').append(videos.join('\n'));
+    $('#video').append(videos.join('\n'));
+  }
 
   videoElement.addEventListener('loadeddata', function() {
     adjustBackground();
