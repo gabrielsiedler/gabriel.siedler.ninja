@@ -1,47 +1,91 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<title>Gabriel Siedler</title>
-		<meta content="width=device-width, initial-scale=1.0" name="viewport">
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300,600' rel='stylesheet' type='text/css'>
-		<link href="assets/css/static.css" rel="stylesheet" type="text/css">
-		<link rel="icon" type="image/x-ico; charset=binary" href="assets/favicon.ico">
-	</head>
-	<body>
-		<img id="loader" src="assets/camera.png" title="Loading background video..."/>
-	  <video id="video" poster="assets/thumb.png" loop>
-	  <!-- the video will be loaded async -->
-	  </video>
-		<div class="container">
-			<div class="name">
-				Hello world!
-			</div>
-			<div class="description">
-				<p>I am <strong>Gabriel Siedler</strong>, a software engineer from Brazil.</p>
-				<p>I love developing <strong>SPA</strong>, making everything <strong>mobile friendly</strong> and creating <strong>reliable and good-to-maintain systems</strong>, seeking best practices and a good and <strong>clean code</strong>.</p>
-				<p>Currently I work as full stack developer at <a target="_blank" href="http://www.bravisoftware.com">Bravi Software</a>, using technologies such as Docker, Node.js, React, SQL and NoSQL dbs, everything running in scalable micro-services.</p>
-				<p>You can follow my publications in <a href="http://gabriel.siedler.ninja/blog">my blog</a>.</p>
-			</div>
-			<div class="social-network">
-				<a target="_blank" href="https://www.linkedin.com/in/gabrielsiedler"><img src="assets/linkedin.png"/></a>
-				<a target="_blank" href="https://github.com/gabrielsiedler"><img src="assets/github.png"/></a>
-				<a target="_blank" href="https://twitter.com/gabrielsiedler"><img src="assets/twitter.png"/></a>
-				<a target="_blank" href="skype:gabrielssiedler"><img src="assets/skype.png"/></a>
-				<a target="_blank" href="mailto:gabrielsiedler@gmail.com"><img src="assets/gmail.png"/></a>
-			</div>
-		</div>
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <head>
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/jquery.fs.wallpaper.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
+  </head>
 
-		  ga('create', 'UA-63934754-1', 'auto');
-		  ga('send', 'pageview');
+  <body>
+    <header id="background-video">
+        <nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header">
+          <div class="container-fluid">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a href="#top" class="navbar-brand">
+                http://gabriel.siedler.ninja
+              </a>
+            </div>
 
-		</script>
-		<script src="assets/js/jquery-1.11.3.min.js"></script>
-		<script src="assets/js/background-video.js"></script>
-	</body>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li><a href="#about">About</a></li>
+                <li><a href="#github">Github</a></li>
+                <li><a href="#codewars">Codewars</a></li>
+                <li><a href="#freecodecamp">Freecodecamp</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+        <div class="floating-presentation text-center">
+          <h1>Gabriel Siedler</h1>
+          <h3>Full stack web developer</h3>
+        </div>
+        <div class="floating-arrow text-center">
+          <a class="btn" href="#about">
+            <i class="fa fa-arrow-circle-down fa-4x"></i>
+          </a>
+        </div>
+    </header>
+    <div class="container-fluid">
+      <section class="row text-center" id="about">
+        <h1>Hi there!</h1>
+        <p>I am Gabriel Siedler, a full stack web developer from Brazil.</p>
+        <p>I love developing SPA, making everything mobile friendly and creating reliable and good-to-maintain systems, seeking best practices and a good and clean code.</p>
+        <p>Currently I'm a freelancer working as full stack or front-end developer, using technologies such as Docker, Node.js, React, Redux, SQL and NoSQL dbs, everything running in scalable micro-services.</p>
+        <p>You can follow my publications in my blog or you can follow my studies at my github specific repository.</p>
+      </section>
+      <section class="row" id="github">
+        Github here
+      </section>
+      <section class="row" id="codewars">
+        Codewars here
+      </section>
+      <section class="row" id="freecodecamp">
+        Freecodecamp here
+      </section>
+      <section class="row" id="contact">
+        Contact here
+      </section>
+    </div>
+    <footer>
+      Footer here
+    </footer>
+
+    <script src="assets/js/vendor/jquery-2.2.0.min.js"></script>
+    <script src="assets/js/vendor/bootstrap.min.js"></script>
+    <script src="assets/js/vendor/classie.js"></script>
+    <script src="assets/js/vendor/cbpAnimatedHeader.min.js"></script>
+    <script src="assets/js/vendor/jquery.fs.wallpaper.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
 </html>
