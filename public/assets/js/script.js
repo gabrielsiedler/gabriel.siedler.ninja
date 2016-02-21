@@ -12,5 +12,19 @@ $(function () {
     }
   });
 
-  $('body').scrollspy({ target: '.navbar' });
+  $('body').scrollspy({
+    target: '.navbar',
+    offset: 100
+  });
+
+  //smooth scrolling
+  $('nav a, .btn').on('click', function (event) {
+    var MENU_SIZE = 51;
+    if (/^#/.test($(this).attr('href'))) {
+      event.preventDefault();
+      $('html, body').stop().animate({
+        scrollTop: $($(this).attr('href')).offset().top - MENU_SIZE
+      }, 1000, 'easeInOutExpo');
+    }
+  });
 })
