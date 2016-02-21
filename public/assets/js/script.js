@@ -22,10 +22,16 @@ $(function () {
   //smooth scrolling
   $('nav a, .btn').on('click', function (event) {
     var MENU_SIZE = 51;
-    if (/^#.+/.test($(this).attr('href'))) {
+    var offset = 0;
+    var HREF = $(this).attr('href');
+    if (/^#.+/.test(HREF)) {
       event.preventDefault();
+      if (HREF === '#background-video') {
+        offset = -51;
+      }
+
       $('html, body').stop().animate({
-        scrollTop: $($(this).attr('href')).offset().top - MENU_SIZE
+        scrollTop: $(HREF).offset().top - MENU_SIZE + offset
       }, 1000, 'easeInOutExpo');
     }
   });
