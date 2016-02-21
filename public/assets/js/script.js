@@ -1,3 +1,5 @@
+new WOW().init();
+
 $(function () {
   $(window).on('load resize', function () {
     $('.fill-screen').css('height', window.innerHeight);
@@ -20,7 +22,7 @@ $(function () {
   //smooth scrolling
   $('nav a, .btn').on('click', function (event) {
     var MENU_SIZE = 51;
-    if (/^#/.test($(this).attr('href'))) {
+    if (/^#.+/.test($(this).attr('href'))) {
       event.preventDefault();
       $('html, body').stop().animate({
         scrollTop: $($(this).attr('href')).offset().top - MENU_SIZE
