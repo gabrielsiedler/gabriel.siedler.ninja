@@ -4,8 +4,20 @@ body {
 }
 
 body {
-  background-color: #000;
+  background-color: #303133;
+  font-family: 'Roboto', sans-serif;
+  padding-top: 71px;
 }
+
+p {
+  font-size: 18px;
+}
+
+em {
+  font-style: normal;
+  font-weight: bold;
+}
+
 header {
   display: block;
   position: relative;
@@ -18,6 +30,8 @@ header {
   background-color: #222;
   background-size: cover;
 }
+
+
 
 .floating-presentation {
   position: absolute;
@@ -36,8 +50,13 @@ header {
   color: white;
 }
 
+.floating-arrow .btn:hover {
+  opacity: .8;
+}
+
 section {
   background-color: white;
+  padding: 50px 0;
 }
 
 #github {
@@ -45,17 +64,22 @@ section {
 }
 
 #codewars {
-  background-color: red;
+  background-color: #303133;
   height: 600px;
 }
 
 #freecodecamp {
-  background-color: green;
+  background-color: #006400;
   height: 600px;
 }
 #contact {
-  background-color: blue;
+  background-color: white;
   height: 600px;
+}
+
+footer {
+  background-color: #222;
+  height: 300px;
 }
 
 .navbar {
@@ -72,8 +96,4 @@ section {
 .cbp-af-header-shrink {
   padding: 0 5px;
   opacity: .8;
-}
-
-body {
-  padding-top: 71px;
 }

@@ -3,6 +3,7 @@
   <head>
     <title>Gabriel Siedler</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/jquery.fs.wallpaper.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/vendor/font-awesome.min.css" />
@@ -10,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="assets/css/app.css" />
   </head>
 
-  <body class="wow fadeIn">
+  <body>
     <header id="background-video">
         <nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header">
           <div class="container-fluid">
@@ -29,18 +30,18 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#about">About</a></li>
-                <li><a href="#github">Github</a></li>
                 <li><a href="#codewars">Codewars</a></li>
-                <li><a href="#freecodecamp">Freecodecamp</a></li>
+                <li><a href="#github">Github</a></li>
+                <li><a href="#freecodecamp">freeCodeCamp</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="fa fa-external-link"></i> <i class="fa fa-caret-down"></i></a>
                   <ul class="dropdown-menu">
-                    <li><a href="#">Action</a></li>
-                    <li><a href="#">Another action</a></li>
-                    <li><a href="#">Something else here</a></li>
-                    <li role="separator" class="divider"></li>
-                    <li><a href="#">Separated link</a></li>
+                    <li><a target="_blank" href="https://github.com/gabrielsiedler"><i class="fa fa-github"></i> Github</a></li>
+                    <li><a target="_blank" href="http://www.codewars.com/users/gabrielsiedler"><i class="fa fa-circle"></i> Codewars</a></li>
+                    <li><a target="_blank" href="http://www.freecodecamp.com/gabrielsiedler"><i class="fa fa-circle"></i> freeCodeCamp</a></li>
+                    <li><a target="_blank" href="https://linkedin.com/in/gabrielsiedler"><i class="fa fa-linkedin"></i> Linkedin</a></li>
+                    <li><a target="_blank" href="https://twitter.com/gabrielsiedler"><i class="fa fa-twitter"></i> Twitter</a></li>
                   </ul>
                 </li>
               </ul>
@@ -59,17 +60,19 @@
     </header>
     <div class="container-fluid">
       <section class="row text-center" id="about">
-        <h1>Hi there!</h1>
-        <p>I am Gabriel Siedler, a full stack web developer from Brazil.</p>
-        <p>I love developing SPA, making everything mobile friendly and creating reliable and good-to-maintain systems, seeking best practices and a good and clean code.</p>
-        <p>Currently I'm a freelancer working as full stack or front-end developer, using technologies such as Docker, Node.js, React, Redux, SQL and NoSQL dbs, everything running in scalable micro-services.</p>
-        <p>You can follow my publications in my blog or you can follow my studies at my github specific repository.</p>
-      </section>
-      <section class="row" id="github">
-        Github here
+        <div class="col-md-8 col-md-offset-2">
+          <h1>Hi there!</h1>
+          <p>I am <em>Gabriel Siedler</em>, a full stack web developer from Brazil.</p>
+          <p>I love developing <em>SPA</em>, making everything <em>mobile friendly</em> and creating <em>reliable and good-to-maintain systems</em>, seeking best practices and a good and <em>clean code</em>.</p>
+          <p>Currently I'm a freelancer working as <em>full stack or front-end developer</em>, using technologies such as Docker, Node.js, React, Redux, SQL and NoSQL dbs, everything running in scalable micro-services.</p>
+          <p>You can follow my publications in <a href="http://gabriel.siedler.ninja/blog" target="_blank">my blog</a> or you can follow my studies at my <a href="https://github.com/gabrielsiedler/learning-tracker" target="_blank">github specific repository</a>.</p>
+        </div>
       </section>
       <section class="row" id="codewars">
         Codewars here
+      </section>
+      <section class="row" id="github">
+        Github here
       </section>
       <section class="row" id="freecodecamp">
         Freecodecamp here
