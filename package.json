@@ -19,6 +19,7 @@
   "homepage": "http://gabriel.siedler.ninja",
   "dependencies": {
     "express": "^4.12.4",
+    "moment": "^2.11.2",
     "request-promise": "^2.0.1"
   }
 }
