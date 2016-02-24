@@ -40,15 +40,29 @@ header {
   background-size: cover;
 }
 
+.name {
+  color: white;
+  font-size: 70px;
+  text-shadow: 1px 1px 4px black;
+}
+
 @media (max-width: 767px) {
   .text-center-xs {
     text-align: center;
   }
+
+  .name {
+    font-size: 40px;
+  }
 }
 
-.navbar-brand img {
-  width: 40px;
-  margin-top: -9px;
+
+.sub {
+  margin-top: 0;
+}
+
+.navbar-brand i {
+  margin-top: -10px;
 }
 
 .floating-presentation {
