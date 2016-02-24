@@ -31,6 +31,11 @@ header {
   background-size: cover;
 }
 
+@media (max-width: 767px) {
+  .text-center-xs {
+    text-align: center;
+  }
+}
 
 
 .floating-presentation {
@@ -65,7 +70,28 @@ section {
 
 #codewars {
   background-color: #303133;
-  height: 600px;
+  color: white;
+}
+
+#codewars a {
+  color: white;
+}
+
+#codewars a.main:hover {
+  text-decoration: none;
+}
+
+#codewars p {
+  font-size: 16px;
+}
+
+#codewars h2,
+#codewars h3 {
+  margin: 20px 0;
+}
+
+#codewars strong {
+  letter-spacing: 0.5px;
 }
 
 #freecodecamp {

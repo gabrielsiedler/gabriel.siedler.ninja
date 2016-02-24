@@ -30,8 +30,8 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="#about">About</a></li>
-                <li><a href="#codewars">Codewars</a></li>
-                <li><a href="#github">Github</a></li>
+                <li><a href="#codewars"><i id="menu-codewars-spin" class="fa fa-circle-o-notch fa-spin"></i> Codewars</a></li>
+                <li><a href="#github"><i id="menu-github-spin" class="fa fa-circle-o-notch fa-spin"></i> Github</a></li>
                 <li><a href="#freecodecamp">freeCodeCamp</a></li>
                 <li><a href="#contact">Contact</a></li>
                 <li class="dropdown">
@@ -60,19 +60,46 @@
     </header>
     <div class="container-fluid">
       <section class="row text-center" id="about">
-        <div class="col-md-8 col-md-offset-2">
+        <div class="col-md-8 col-md-offset-2 wow tada">
           <h1>Hi there!</h1>
           <p>I am <em>Gabriel Siedler</em>, a full stack web developer from Brazil.</p>
           <p>I love developing <em>SPA</em>, making everything <em>mobile friendly</em> and creating <em>reliable and good-to-maintain systems</em>, seeking best practices and a good and <em>clean code</em>.</p>
           <p>Currently I'm a freelancer working as <em>full stack or front-end developer</em>, using technologies such as Docker, Node.js, React, Redux, SQL and NoSQL dbs, everything running in scalable micro-services.</p>
-          <p>You can follow my publications in <a href="http://gabriel.siedler.ninja/blog" target="_blank">my blog</a> or you can follow my studies at my <a href="https://github.com/gabrielsiedler/learning-tracker" target="_blank">github specific repository</a>.</p>
+          <p>You can follow my publications in <a href="http://gabriel.siedler.ninja/blog" target="_blank">my blog</a> or my studies at my <a href="https://github.com/gabrielsiedler/learning-tracker" target="_blank">github specific repository</a>.</p>
         </div>
       </section>
       <section class="row" id="codewars">
-        Codewars here
+        <div class="col-md-8 col-md-offset-2 wow fadeInLeft">
+          <div class="col-sm-6 col-md-3 text-center">
+            <a class="main" target="_blank" href="http://www.codewars.com">
+              <img src="assets/img/codewars.png" />
+              <h2 class="text-center">Codewars</h2>
+            </a>
+          </div>
+          <div class="col-sm-6 col-md-9">
+            <p><a target="_blank" href="http://www.codewars.com">CodeWars</a> is a website where you can improve your skills by training with others on real code challenges.</p>
+            <p>Each challenge is ranked from <img src="assets/img/8kyu.png" /> (easy, basic, fundamentals) to <img src="assets/img/1kyu.png" /> (hard, expert, compilers).</p>
+            <div class="text-center-xs">
+              <h3>My statistics:</h3>
+              <div class="col-md-6">
+                <p><strong>User:</strong> <a target="_blank" href="http://www.codewars.com/users/gabrielsiedler">gabrielsiedler</a></p>
+                <p><strong>Honor:</strong> <i class="fa fa-circle-o-notch fa-spin"></i><span id="codewars-honor"></span></p>
+                <p><strong>Leaderboard Position:</strong> <i class="fa fa-circle-o-notch fa-spin"></i><span id="codewars-leaderboard"></span></p>
+                <p><strong>Current rank:</strong> <i class="fa fa-circle-o-notch fa-spin"></i><span id="codewars-rank"></span></p>
+              </div>
+              <div class="col-md-6">
+                <p><strong>Score:</strong> <i class="fa fa-circle-o-notch fa-spin"></i><span id="codewars-score"></span></p>
+                <p><strong>Katas authored:</strong> <i class="fa fa-circle-o-notch fa-spin"></i><span id="codewars-authored"></span></p>
+                <p><strong>Katas completed:</strong> <i class="fa fa-circle-o-notch fa-spin"></i><span id="codewars-completed"></span></p>
+              </div>
+            </div>
+          </div>
+          <div class="text-center">
+          </div>
+      </div>
       </section>
       <section class="row" id="github">
-        Github here
+        <i class="fa fa-circle-o-notch fa-spin fa-4x"></i>
       </section>
       <section class="row" id="freecodecamp">
         Freecodecamp here
@@ -93,5 +120,6 @@
     <script src="assets/js/vendor/jquery.easing.1.3.js"></script>
     <script src="assets/js/vendor/wow.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/ajax-requests.js"></script>
   </body>
 </html>
