@@ -46,6 +46,10 @@ header {
   }
 }
 
+.navbar-brand img {
+  width: 40px;
+  margin-top: -9px;
+}
 
 .floating-presentation {
   position: absolute;
