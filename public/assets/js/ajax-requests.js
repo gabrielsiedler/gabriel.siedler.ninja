@@ -11,7 +11,7 @@ $(function () {
       }).join(''));
     })
     .fail(function (error) {
-      console.error("Error when trying to fetch data from github:", error)
+      console.error("Error when trying to fetch data from github.")
     })
     .always(function () {
         $('#menu-github-spin').hide();
@@ -30,7 +30,7 @@ $(function () {
         $('#codewars-completed').text(data.completed);
       })
       .fail(function (error) {
-        console.error("Error when trying to fetch data from codewars:", error)
+        console.error("Error when trying to fetch data from codewars.")
       })
       .always(function () {
         $('#menu-codewars-spin').hide();
