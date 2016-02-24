@@ -126,6 +126,10 @@ h3 {
   vertical-align: top;
 }
 
+#contact a {
+  color: #303133;
+}
+
 .navbar {
   margin-bottom: 0;
   border-radius: 0;
