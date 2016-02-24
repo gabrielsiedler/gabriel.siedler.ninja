@@ -105,16 +105,21 @@ h3 {
 
 #freecodecamp {
   background-color: #006400;
-  height: 600px;
-}
-#contact {
-  background-color: white;
-  height: 600px;
+  color: white;
 }
 
-footer {
-  background-color: #222;
-  height: 300px;
+#freecodecamp a {
+  color: white;
+}
+
+
+#contact {
+  background-color: white;
+  min-height: 200px;
+}
+
+#contact img {
+  vertical-align: top;
 }
 
 .navbar {
