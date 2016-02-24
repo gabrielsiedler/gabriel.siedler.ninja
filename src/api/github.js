@@ -33,10 +33,7 @@ const gatherUser = output => {
       output.user = {
         public_repos: data.public_repos,
         followers: data.followers,
-        following: data.following,
-        avatar_url: data.avatar_url,
-        location: data.location,
-        email: data.email,
+        following: data.following
       };
     });
 };
@@ -52,7 +49,7 @@ const gatherEvents = output => {
 
   return rp(request)
     .then(data => {
-      output.events = data.map(mapEvents);
+      output.events = data.map(mapEvents).slice(0,5);
     });
 };
 

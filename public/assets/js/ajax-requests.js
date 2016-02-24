@@ -1,18 +1,23 @@
 $(function () {
-//   //Github API
-//   $.get("api/github")
-//     .done(function (data) {
-//       console.log('ok', data);
-//       $('#github').text(data);
-//     })
-//     .fail(function (error) {
-//       console.log("error:", error)
-//       $('#github').text('Error');
-//     })
-//     .always(function () {
-//       //removeLoader
-//     })
-//
+  //Github API
+  $.get("api/github")
+    .done(function (data) {
+      $('#github-public_repos').text(data.user.public_repos);
+      $('#github-followers').text(data.user.followers);
+      $('#github-following').text(data.user.following);
+
+      $('#github-events').html(data.events.map(function (event) {
+        return '<li>' + event.createdAt + ' - <a target="_blank" href="' + event.url  + '">' + event.message + '</a></li>';
+      }).join(''));
+    })
+    .fail(function (error) {
+      console.error("Error when trying to fetch data from github:", error)
+    })
+    .always(function () {
+        $('#menu-github-spin').hide();
+        $('#github .fa-spin').hide();
+      })
+
     //Codewars API
     $.get("api/codewars")
       .done(function (data) {
