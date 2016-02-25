@@ -3,6 +3,7 @@ static:
   build: .
   ports:
     - "8090:3000"
+  working_dir: /usr/src/app
   environment:
     VIRTUAL_HOST: static-gabriel.siedler.ninja
     VIRTUAL_PORT: 3000
