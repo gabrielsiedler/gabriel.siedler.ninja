@@ -28,6 +28,10 @@ const gatherUser = output => {
     json: true
   };
 
+  if (process.env.GITHUB_TOKEN) {
+    request.headers.Authorization = `token ${process.env.GITHUB_TOKEN}`;
+  }
+
   return rp(request)
     .then(data => {
       output.user = {
@@ -46,6 +50,10 @@ const gatherEvents = output => {
     },
     json: true
   };
+
+  if (process.env.GITHUB_TOKEN) {
+    request.headers.Authorization = `token ${process.env.GITHUB_TOKEN}`;
+  }
 
   return rp(request)
     .then(data => {

@@ -8,6 +8,12 @@ router.get('/', (req, res) => {
     json: true
   };
 
+  if (process.env.CODEWARS_TOKEN) {
+    request.headers = {
+      Authorization: process.env.CODEWARS_TOKEN
+    };
+  }
+
   rp(request)
     .then(data => {
       res.send({
