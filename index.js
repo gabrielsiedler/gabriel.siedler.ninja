@@ -1,11 +1,7 @@
-var express = require('express');
-var app = express();
+const api = require('./src/api');
+const app = require('./src/app');
+const port = process.env.VIRTUAL_PORT || '8090';
 
-app.use(express.static(__dirname + '/public'));
-
-var host = process.env.VIRTUAL_HOST;
-var port = process.env.VIRTUAL_PORT;
-
-app.listen(port);
-
-console.log('Serving static content at',host+':'+port);
+app.listen(port, _ => {
+  console.log(`App running on ${port}`);
+});
