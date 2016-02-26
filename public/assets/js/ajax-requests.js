@@ -7,7 +7,10 @@ $(function () {
       $('#github-following').text(data.user.following);
 
       $('#github-events').html(data.events.map(function (event) {
-        return '<li>' + event.createdAt + ' - <a target="_blank" href="' + event.url  + '">' + event.message + '</a></li>';
+        var li = '<li>' + event.createdAt + ' -';
+        li += event.url ? '<a target="_blank" href="' + event.url  + '">' + event.message + '</a>' : event.message;
+        li += '</li>';
+        return li;
       }).join(''));
     })
     .fail(function (error) {

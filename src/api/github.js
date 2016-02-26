@@ -81,7 +81,8 @@ const mapEvents = event => {
       break;
     case 'DeleteEvent':
       Object.assign(output, {
-        message: `Deleted a ${event.payload.ref_type} (${event.repo.name}).`
+        message: `Deleted a ${event.payload.ref_type} (${event.repo.name}).`,
+        url: `https://github.com/${event.repo.name}`
       });
       break;
     case 'IssueCommentEvent': //v
