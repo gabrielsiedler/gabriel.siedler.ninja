@@ -130,6 +130,30 @@ h3 {
   color: white;
 }
 
+.custom-thumbnail {
+  margin-top: 10px;
+}
+
+.custom-thumbnail img {
+  width: 100%;
+  border-radius: 5px 5px 0;
+}
+
+.custom-thumbnail:hover img {
+  opacity: .8;
+}
+
+.custom-thumbnail .caption {
+  width: 100%;
+  background-color: white;
+  color: black;
+  padding: 20px 0 10px;
+  border-radius: 0 0 5px 5px;
+}
+
+.portfolio-title {
+  margin: 10px 0;
+}
 
 #contact {
   background-color: white;
