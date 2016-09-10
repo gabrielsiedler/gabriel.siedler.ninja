@@ -24,7 +24,7 @@ $(function () {
     // Codewars API
   $.get('api/codewars')
     .done(function (data) {
-      var rank = '<img src="assets/img/' + data.rank[0] + 'kyu.png" />';
+      var rank = '<img src="img/' + data.rank[0] + 'kyu.png" />';
       $('#codewars-honor').text(data.honor);
       $('#codewars-leaderboard').text('#' + data.leaderboardPosition);
       $('#codewars-rank').html(rank);

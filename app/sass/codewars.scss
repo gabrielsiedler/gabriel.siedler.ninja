@@ -1,0 +1,22 @@
+#codewars {
+  background-color: $mainColor;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  strong {
+    letter-spacing: 0.5px;
+  }
+
+  .text-center-xs {
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}

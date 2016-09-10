@@ -1,0 +1,13 @@
+$mainColor: #303133;
+$freeCodeCamp: #006400;
+$white: white;
+$black: black;
+$headerBackground: #222;
+$headerLink: #bbb;
+
+@import 'general';
+@import 'header';
+@import 'codewars';
+@import 'github';
+@import 'freecodecamp';
+@import 'contact';

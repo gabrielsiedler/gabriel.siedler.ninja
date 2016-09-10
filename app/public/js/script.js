@@ -7,10 +7,10 @@ $(function () {
 
   $('#background-video').wallpaper({
     source: {
-      poster: 'assets/img/poster.png',
-      mp4: 'assets/video/background.mp4',
-      ogv: 'assets/video/background.ogv',
-      webm: 'assets/video/background.webm'
+      poster: 'img/poster.png',
+      mp4: 'video/background.mp4',
+      ogv: 'video/background.ogv',
+      webm: 'video/background.webm'
     }
   });
 

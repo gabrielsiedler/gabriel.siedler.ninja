@@ -6,7 +6,9 @@
   "scripts": {
     "start": "node .",
     "start-dev": "nodemon .",
-    "test": "eslint ."
+    "test": "eslint . && stylelint \"app/sass/*.scss\" --syntax scss",
+    "build-sass": "sass --sourcemap=none ./app/sass/all.scss ./app/public/css/app.min.css --style compressed",
+    "watch-sass": "sass --sourcemap=none --watch ./app/sass/all.scss:./app/public/css/app.min.css --style compressed"
   },
   "repository": {
     "type": "git",
