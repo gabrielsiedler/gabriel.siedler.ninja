@@ -1,6 +1,6 @@
 module.exports = {
     root: true,
-    extends: ['airbnb-base/legacy'],
+    extends: 'airbnb-base/legacy',
     rules: {
         'comma-dangle': ['error', 'only-multiline'],
 
