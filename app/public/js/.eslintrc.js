@@ -18,5 +18,6 @@ module.exports = {
     globals: {
         '$': true,
         'WOW': true,
+        'ga': true,
     }
 };
