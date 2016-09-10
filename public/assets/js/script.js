@@ -3,7 +3,7 @@ new WOW().init();
 $(function () {
   $(window).on('load resize', function () {
     $('.fill-screen').css('height', window.innerHeight);
-  })
+  });
 
   $('#background-video').wallpaper({
     source: {
@@ -19,7 +19,7 @@ $(function () {
     offset: 100
   });
 
-  //smooth scrolling
+  // smooth scrolling
   $('nav a, .btn').on('click', function (event) {
     var MENU_SIZE = 51;
     var offset = 0;
@@ -31,7 +31,7 @@ $(function () {
       }
 
       $('html, body').stop().animate({
-        scrollTop: $(HREF).offset().top - MENU_SIZE + offset
+        scrollTop: $(HREF).offset().top - (MENU_SIZE + offset)
       }, 1000, 'easeInOutExpo');
     }
   });
@@ -66,4 +66,4 @@ $(function () {
       }
     ]
   });
-})
+});
