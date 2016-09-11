@@ -1,6 +1,10 @@
 $(function () {
-  var sendTracking = function (category, action, label) {
-    ga('send', 'event', category, action, label);
+  var sendScrollTracking = function (section) {
+    ga('send', 'event', {
+      eventCategory: 'Scroll',
+      eventAction: 'IntoView',
+      eventValue: section
+    });
   };
 
   var tracking = {
@@ -15,7 +19,13 @@ $(function () {
     e.preventDefault();
 
     var url = $(this).data('tracking');
-    sendTracking('link', 'click', url);
+
+    ga('send', 'event', {
+      eventCategory: 'Outbound',
+      eventAction: 'Click',
+      eventValue: url
+    });
+
     window.open(url);
   });
 
@@ -30,29 +40,14 @@ $(function () {
   };
 
   $(document).on('scroll', function () {
-    if (!tracking.about && isScrolledIntoView($('#about'))) {
-      sendTracking('about', 'scroll');
-      tracking.about = true;
-    }
+    var sections = ['about', 'github', 'codewars', 'freecodecamp', 'contact'];
 
-    if (!tracking.github && isScrolledIntoView($('#github'))) {
-      sendTracking('github', 'scroll');
-      tracking.github = true;
-    }
-
-    if (!tracking.codewars && isScrolledIntoView($('#codewars'))) {
-      sendTracking('codewars', 'scroll');
-      tracking.codewars = true;
-    }
-
-    if (!tracking.freecodecamp && isScrolledIntoView($('#freecodecamp'))) {
-      sendTracking('freecodecamp', 'scroll');
-      tracking.freecodecamp = true;
-    }
-
-    if (!tracking.contact && isScrolledIntoView($('#contact'))) {
-      sendTracking('contact', 'scroll');
-      tracking.contact = true;
-    }
+    sections.forEach(function (section) {
+      var element = $('#' + section);
+      if (!tracking[section] && isScrolledIntoView(element)) {
+        sendScrollTracking(section);
+        tracking[section] = true;
+      }
+    });
   });
 });
