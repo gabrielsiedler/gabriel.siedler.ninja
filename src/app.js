@@ -8,4 +8,5 @@ app.use('/api', require('./api'));
 app.use('/npm', express.static(path.join(__dirname, '../node_modules/bootstrap/dist')));
 app.use('/npm', express.static(path.join(__dirname, '../node_modules/jquery/dist')));
 app.use('/npm', express.static(path.join(__dirname, '../node_modules/font-awesome')));
+app.use('/npm', express.static(path.join(__dirname, '../node_modules/slick-carousel/slick')));
 app.use('/', express.static((path.join(__dirname, '../app/public'))));
