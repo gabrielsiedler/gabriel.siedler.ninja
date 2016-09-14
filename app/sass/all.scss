@@ -1,5 +1,6 @@
 $mainColor: #303133;
 $freeCodeCamp: #006400;
+$footer: lighten($mainColor, 70%);
 $white: white;
 $black: black;
 $headerBackground: #222;
@@ -11,3 +12,4 @@ $headerLink: #bbb;
 @import 'github';
 @import 'freecodecamp';
 @import 'contact';
+@import 'footer';

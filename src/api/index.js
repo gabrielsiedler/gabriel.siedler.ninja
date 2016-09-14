@@ -1,8 +1,7 @@
-const codewarsAPI = require('./codewars');
-const githubAPI = require('./github');
 const express = require('express');
 
 const router = module.exports = express.Router();
 
-router.use('/codewars', codewarsAPI);
-router.use('/github', githubAPI);
+router.use('/codewars', require('./codewars'));
+router.use('/github', require('./github'));
+router.use('/contact', require('./contact'));
