@@ -31,5 +31,18 @@
 
   .portfolio-title {
     margin: 10px 0;
+    font-weight: bold;
+  }
+
+  .portfolio-subtitle {
+    margin-top: 20px;
+
+    i {
+      margin-right: 5px;
+    }
+  }
+
+  .portfolio-description {
+    font-size: 14px;
   }
 }
