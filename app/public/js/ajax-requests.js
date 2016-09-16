@@ -80,6 +80,8 @@ $(function () {
         $('#contact form .btn i')
         .addClass('fa-mail-forward')
         .removeClass('fa-circle-o-notch fa-spin');
+
+        grecaptcha.reset();
       });
   });
 });
