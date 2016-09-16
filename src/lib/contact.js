@@ -1,7 +1,9 @@
 const mongoose = require('mongoose');
 const axios = require('axios');
 
-mongoose.connect(`mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@localhost/contact`);
+
+const mongoUrl = `mongodb://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@localhost/contact?authSource=admin`;
+mongoose.connect(mongoUrl);
 
 const ContactModel = mongoose.model('Contact', {
   name: String,
@@ -49,13 +51,15 @@ const save = (email, recaptcha) => {
     recaptchaUrl += `?secret=${process.env.RECAPTCHA_TOKEN}`;
     recaptchaUrl += `&response=${recaptcha}`;
 
+    console.log('fetching');
     axios.post(recaptchaUrl).then(response => {
+      console.log('response');
       if (!response.data.success) {
         return reject({ error: { recaptcha: 'Invalid Captcha.' } });
       }
 
       const Contact = new ContactModel(email);
-      return Contact.save(email, (err, data) => {
+      return Contact.create(email, (err, data) => {
         if (err) {
           return reject(err);
         }
