@@ -51,15 +51,13 @@ const save = (email, recaptcha) => {
     recaptchaUrl += `?secret=${process.env.RECAPTCHA_TOKEN}`;
     recaptchaUrl += `&response=${recaptcha}`;
 
-    console.log('fetching');
     axios.post(recaptchaUrl).then(response => {
-      console.log('response');
       if (!response.data.success) {
         return reject({ error: { recaptcha: 'Invalid Captcha.' } });
       }
 
       const Contact = new ContactModel(email);
-      return Contact.create(email, (err, data) => {
+      return Contact.save(email, (err, data) => {
         if (err) {
           return reject(err);
         }
