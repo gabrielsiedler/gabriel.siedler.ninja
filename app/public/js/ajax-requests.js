@@ -54,7 +54,10 @@ $(function () {
       .removeClass('fa-mail-forward')
       .addClass('fa-circle-o-notch fa-spin');
 
-    $.post('api/contact', { email: email })
+    $.post('api/contact', {
+      email: email,
+      recaptcha: $('#g-recaptcha-response').val()
+    })
       .done(function () {
         $('#contact .form-group').removeClass('has-error');
         $('#contact .form-group .help-block').text('');

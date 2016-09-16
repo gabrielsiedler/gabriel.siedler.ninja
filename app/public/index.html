@@ -27,6 +27,7 @@
   </head>
 
   <body>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
     <header id="background-video">
         <nav class="navbar navbar-inverse navbar-fixed-top cbp-af-header">
           <div class="container-fluid">
@@ -271,7 +272,11 @@
                 <textarea rows="10" class="form-control" id="message" placeholder="Message" required></textarea>
                 <span class="help-block"></span>
               </div>
-              <button type="submit" class="btn btn-default"><i class="fa fa-mail-forward"></i> Send</button>
+              <div class="form-group">
+                <div class="g-recaptcha" id="recaptcha" data-sitekey="6LfiGyoTAAAAAMjVqvSHHhCa-U_u7mmqMmJo9GsO"></div>
+                <span class="help-block"></span>
+              </div>
+              <button type="submit" class="submit-contact btn btn-default"><i class="fa fa-mail-forward"></i> Send</button>
               <br/>
               <small>or contact directly through <a href="mailto:gabrielsiedler@gmail.com">gabrielsiedler@gmail.com</a></small>
             </form>

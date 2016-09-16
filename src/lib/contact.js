@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const axios = require('axios');
 
 mongoose.connect('mongodb://localhost/contact');
 
@@ -42,15 +43,25 @@ const validate = email => {
   return validation;
 };
 
-const save = email => {
+const save = (email, recaptcha) => {
   return new Promise((resolve, reject) => {
-    const Contact = new ContactModel(email);
-    Contact.save(email, (err, data) => {
-      if (err) {
-        return reject(err);
+    let recaptchaUrl = 'https://www.google.com/recaptcha/api/siteverify';
+    recaptchaUrl += `?secret=${process.env.RECAPTCHA_TOKEN}`;
+    recaptchaUrl += `&response=${recaptcha}`;
+
+    axios.post(recaptchaUrl).then(response => {
+      if (!response.data.success) {
+        return reject({ error: { recaptcha: 'Invalid Captcha.' } });
       }
 
-      return resolve(data);
+      const Contact = new ContactModel(email);
+      return Contact.save(email, (err, data) => {
+        if (err) {
+          return reject(err);
+        }
+
+        return resolve(data);
+      });
     });
   });
 };
