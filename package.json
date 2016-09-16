@@ -21,11 +21,14 @@
   },
   "homepage": "http://gabriel.siedler.ninja",
   "dependencies": {
+    "axios": "^0.14.0",
+    "body-parser": "^1.15.2",
     "bootstrap": "^3.3.7",
     "express": "^4.12.4",
     "font-awesome": "^4.6.3",
     "jquery": "^2.2.4",
     "moment": "^2.11.2",
+    "mongoose": "^4.6.0",
     "request-promise": "^2.0.1",
     "slick-carousel": "^1.6.0"
   },

@@ -66,4 +66,10 @@ $(function () {
       }
     ]
   });
+
+  $('.form-feedback .close').on('click', function (e) {
+    e.preventDefault();
+
+    $('.form-feedback').hide(200);
+  });
 });

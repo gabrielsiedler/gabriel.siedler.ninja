@@ -1,0 +1,17 @@
+#footer {
+  background-color: $footer;
+  min-height: 100px;
+  padding: 20px;
+
+  img {
+    vertical-align: top;
+  }
+
+  a {
+    color: $mainColor;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
