@@ -255,14 +255,21 @@
           </div>
           <div class="col-sm-6 col-md-9 col-sm-pull-6 col-md-pull-3">
             <form>
+              <div class="alert alert-success alert-dismissible form-feedback collapse">
+                <button type="button" class="close"><span aria-hidden="true">&times;</span></button>
+                The message was successfully sent.
+              </div>
               <div class="form-group">
                 <input type="text" class="form-control" id="name" placeholder="Name" required>
+                <span class="help-block"></span>
               </div>
               <div class="form-group">
                 <input type="email" class="form-control" id="email" placeholder="Email" required>
+                <span class="help-block"></span>
               </div>
               <div class="form-group">
                 <textarea rows="10" class="form-control" id="message" placeholder="Message" required></textarea>
+                <span class="help-block"></span>
               </div>
               <button type="submit" class="btn btn-default"><i class="fa fa-mail-forward"></i> Send</button>
               <br/>

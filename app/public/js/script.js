@@ -67,8 +67,9 @@ $(function () {
     ]
   });
 
-  $('#contact form').submit(function (e) {
+  $('.form-feedback .close').on('click', function (e) {
     e.preventDefault();
-    console.log('oi');
+
+    $('.form-feedback').hide(200);
   });
 });

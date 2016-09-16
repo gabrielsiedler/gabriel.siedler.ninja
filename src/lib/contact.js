@@ -1,27 +1,58 @@
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/contact');
+
+const ContactModel = mongoose.model('Contact', {
+  name: String,
+  email: String,
+  message: String,
+});
+
 const validate = email => {
-  const nameRegex = /[a-zA-Z\u00C0-\u024F]{5,150}/;
-  const emailRegex = /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
-  const messageRegex = /.{,1000}/;
+  const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
-  const error = {};
+  const validation = {
+    valid: true,
+    error: {},
+  };
 
-  if (!nameRegex(email.name)) {
-    error.name = 'The name should have less than 150 characters.';
+  const nameLength = email.name.trim().length;
+  if (nameLength < 5) {
+    validation.valid = false;
+    validation.error.name = 'The name should have least 5 characters.';
+  } else if (nameLength > 150) {
+    validation.valid = false;
+    validation.error.name = 'The name should less than 150 characters.';
   }
 
-  if (!emailRegex(email.email)) {
-    error.email = 'The email is not valid.';
+  if (!emailRegex.test(email.email)) {
+    validation.valid = false;
+    validation.error.email = 'The email is not valid.';
   }
 
-  if (!messageRegex(email.message)) {
-    error.message = 'The message should contain a maximum of 1000 characters.';
+  const messageLength = email.message.trim().length;
+  if (messageLength < 10) {
+    validation.valid = false;
+    validation.error.message = 'The message should have least 10 characters.';
+  } else if (messageLength > 1000) {
+    validation.valid = false;
+    validation.error.message = 'The message should have less than 1000 characters.';
   }
 
-  if (Object.keys(error).length) {
-    return error;
-  }
-
-  return true;
+  return validation;
 };
 
-module.exports = { validate };
+const save = email => {
+  return new Promise((resolve, reject) => {
+    const Contact = new ContactModel(email);
+    Contact.save(email, (err, data) => {
+      if (err) {
+        return reject(err);
+      }
+
+      return resolve(data);
+    });
+  });
+};
+
+module.exports = { validate, save };
