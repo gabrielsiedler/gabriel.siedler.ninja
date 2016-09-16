@@ -1,7 +1,11 @@
 const mongoose = require('mongoose');
 const axios = require('axios');
 
-mongoose.connect('mongodb://localhost/contact');
+mongoose.connect('mongodb://localhost', {
+  db: 'contact',
+  user: process.env.MONGO_USER,
+  pass: process.env.MONGO_PASS,
+});
 
 const ContactModel = mongoose.model('Contact', {
   name: String,
