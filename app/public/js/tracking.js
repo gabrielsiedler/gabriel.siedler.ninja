@@ -8,11 +8,9 @@ $(function () {
   };
 
   var tracking = {
-    about: false,
-    github: false,
-    codewars: false,
-    freecodecamp: false,
-    contact: false,
+    about: true,
+    github: true,
+    codewars: true,
   };
 
   $('[data-tracking]').on('click', function (e) {
@@ -40,7 +38,7 @@ $(function () {
   };
 
   $(document).on('scroll', function () {
-    var sections = ['about', 'github', 'codewars', 'freecodecamp', 'contact'];
+    var sections = ['about', 'github', 'codewars'];
 
     sections.forEach(function (section) {
       var element = $('#' + section);

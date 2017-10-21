@@ -20,5 +20,6 @@ module.exports = {
         'WOW': true,
         'ga': true,
         'grecaptcha': true,
+        'moment': true,
     }
 };

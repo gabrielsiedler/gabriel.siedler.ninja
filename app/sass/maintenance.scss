@@ -1,0 +1,31 @@
+#maintenance {
+  background-color: $mainColor;
+  color: $white;
+
+  a {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .fa-wrench {
+    font-size: 8em;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  strong {
+    letter-spacing: 0.5px;
+  }
+
+  .text-center-xs {
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+}

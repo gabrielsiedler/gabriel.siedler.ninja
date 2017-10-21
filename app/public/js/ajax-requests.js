@@ -1,5 +1,4 @@
 $(function () {
-  // Github API
   $.get('api/github')
     .done(function (data) {
       $('#github-public_repos').text(data.user.public_repos);
@@ -21,7 +20,6 @@ $(function () {
       $('#github .fa-spin').hide();
     });
 
-    // Codewars API
   $.get('api/codewars')
     .done(function (data) {
       var rank = '<img src="img/' + data.rank[0] + 'kyu.png" />';
@@ -39,49 +37,4 @@ $(function () {
       $('#menu-codewars-spin').hide();
       $('#codewars .fa-spin').hide();
     });
-
-  $('#contact form').submit(function (e) {
-    e.preventDefault();
-
-    var email = {
-      name: $('#name').val(),
-      email: $('#email').val(),
-      message: $('#message').val()
-    };
-
-    $('#contact form .btn').prop('disabled', 'disabled');
-    $('#contact form .btn i')
-      .removeClass('fa-mail-forward')
-      .addClass('fa-circle-o-notch fa-spin');
-
-    $.post('api/contact', {
-      email: email,
-      recaptcha: $('#g-recaptcha-response').val()
-    })
-      .done(function () {
-        $('#contact .form-group').removeClass('has-error');
-        $('#contact .form-group .help-block').text('');
-        $('#contact .form-group input, #contact .form-group textarea').val('');
-        $('#contact .form-feedback').show(200);
-      })
-      .fail(function (error) {
-        var errors = error.responseJSON.error;
-
-        $('#contact .form-group').removeClass('has-error');
-        $('#contact .form-group .help-block').text('');
-
-        Object.keys(errors).forEach(function (field) {
-          $('#' + field).parent('.form-group').addClass('has-error');
-          $('#' + field).siblings('.help-block').text(errors[field]);
-        });
-      })
-      .always(function () {
-        $('#contact form .btn').prop('disabled', '');
-        $('#contact form .btn i')
-        .addClass('fa-mail-forward')
-        .removeClass('fa-circle-o-notch fa-spin');
-
-        grecaptcha.reset();
-      });
-  });
 });
