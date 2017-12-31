@@ -5,6 +5,11 @@ export const PresentationContainer = styled.div`
   display: flex;
   color: white;
   position: relative;
+  min-height: 800px;
+
+  @media (min-width: 900px) {
+    height: auto;
+  }
 `;
 
 export const FixedBackground = styled.div`
@@ -12,7 +17,11 @@ export const FixedBackground = styled.div`
   background: ${({ image }) => `url(${image})`};
   background-attachment: fixed;
   background-position: left;
-  background-size: 50%;
+  background-size: 100%;
+
+  @media (min-width: 900px) {
+    background-size: 50%;
+  }
 `;
 
 export const Mask = styled.div`
@@ -23,18 +32,33 @@ export const Mask = styled.div`
 `;
 
 export const Title = styled.div`
-  position: fixed;
-  left: 25%;
+  position: absolute;
+  left: 50%;
   top: 50%;
-  transform: translate(-50%, -25%);
+  transform: translate(-50%, -50%);
+
+  @media (min-width: 900px) {
+    position: fixed;
+    left: 25%;
+    transform: translate(-50%, -25%);
+  }
 
   h1 {
-    font-size: 80px;
-    line-height: 100px;
+    font-size: 65px;
+    line-height: 70px;
+
+    @media (min-width: 900px) {
+      font-size: 80px;
+      line-height: 100px;
+    }
   }
 
   h4 {
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 14px;
+
+    @media (min-width: 900px) {
+      font-size: 16px;
+    }
   }
 `;

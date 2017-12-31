@@ -8,12 +8,20 @@ export const EnvironmentContainer = styled.div`
 `;
 
 export const Item = styled.div`
-  width: 30%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   margin-bottom: 20px;
+
+  @media (min-width: 440px) {
+    width: 45%;
+  }
+
+  @media (min-width: 950px) {
+    width: 30%;
+  }
 `;
 
 export const Logo = styled.div`

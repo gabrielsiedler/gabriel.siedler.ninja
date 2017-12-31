@@ -6,5 +6,9 @@ export const ContentContainer = styled.div`
 `;
 
 export const Data = styled.div`
-  padding: 50px 75px;
+  padding: 40px 50px;
+
+  @media (min-width: 1150px) {
+    padding: 50px 75px;
+  }
 `;

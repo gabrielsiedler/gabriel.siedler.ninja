@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
-export const ContentContainer = styled.div`
-  p {
-    line-height: 24px;
-    margin-bottom: 15px;
-  }
+export const P = styled.p`
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 24px;
+  margin-bottom: 15px;
+  letter-spacing: 0.6px;
 `;
 
 export const H2 = styled.h2`
@@ -13,13 +14,13 @@ export const H2 = styled.h2`
   margin: 50px 0 20px;
   font-family: Montserrat;
   letter-spacing: 0.5px;
-  color: #48626D;
+  color: #999;
 `;
 
 export const H3 = styled.h3`
   font-size: 35px;
   line-height: 40px;
-  margin: 50px 0 20px;
+  margin: 70px 0 20px;
   font-family: Montserrat;
   letter-spacing: 0;
   text-transform: uppercase;
@@ -28,13 +29,14 @@ export const H3 = styled.h3`
 `;
 
 export const B = styled.span`
-  font-weight: bold;
+  font-weight: normal;
 `;
 
 export const A = styled.a`
   color: #48626D;
   text-decoration: none;
   transition: color 0.2s;
+  font-weight: normal;
 
   :hover {
     color: black;

@@ -7,9 +7,6 @@ const Menu = () => (
     <Link href="/home" as="/" passHref>
       <MenuLink>About Me</MenuLink>
     </Link>
-    <Link href="/work" passHref>
-      <MenuLink>Work</MenuLink>
-    </Link>
     <Link href="/clients" passHref>
       <MenuLink>Clients</MenuLink>
     </Link>
