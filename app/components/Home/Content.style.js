@@ -33,7 +33,7 @@ export const B = styled.span`
 `;
 
 export const A = styled.a`
-  color: #48626D;
+  color: #51a1c3;
   text-decoration: none;
   transition: color 0.2s;
   font-weight: normal;

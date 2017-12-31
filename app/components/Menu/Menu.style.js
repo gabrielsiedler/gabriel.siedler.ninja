@@ -18,8 +18,10 @@ export const MenuLink = styled.a`
   cursor: pointer;
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
+  transition: border 0.5s;
 
   &:hover {
     border-bottom: 2px solid white;
+    transition: border 0.5s;
   }
 `;

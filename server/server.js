@@ -5,7 +5,7 @@ const api = require('./api');
 const routes = require('./routes');
 
 const dev = process.env.NODE_ENV !== 'production';
-const app = next({ dir: 'src/app', dev });
+const app = next({ dev });
 const handle = app.getRequestHandler();
 
 const port = process.env.PORT || 3000;

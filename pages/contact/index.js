@@ -1,0 +1,26 @@
+import React from 'react';
+import Head from 'next/head';
+
+import { Presentation } from '../../app/components/Presentation';
+import { Content } from '../../app/components/Content';
+import { FlexContainer } from '../../app/components/Common';
+
+const Contact = () => (
+  <FlexContainer>
+    <Head>
+      <title>Gabriel Siedler - Contact</title>
+      <meta type="description" content="" />
+    </Head>
+    <Presentation
+      title="Gabriel Siedler"
+      subtitle="Full Stack Web Developer"
+      backgroundImage="/static/images/me.png"
+      maskColor="rgba(25,65,86,0.7)"
+    />
+    <Content>
+      contact
+    </Content>
+  </FlexContainer>
+);
+
+export default Contact;

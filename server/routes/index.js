@@ -8,8 +8,13 @@ const routes = (app) => {
     app.render(req, res, actualPage);
   });
 
-  router.get('/agency-enterprise', (req, res) => {
-    const actualPage = '/agency-enterprise';
+  router.get('/work', (req, res) => {
+    const actualPage = '/work';
+    app.render(req, res, actualPage);
+  });
+
+  router.get('/contact', (req, res) => {
+    const actualPage = '/contact';
     app.render(req, res, actualPage);
   });
 
