@@ -12,10 +12,9 @@ const Clients = () => (
       <meta type="description" content="" />
     </Head>
     <Presentation
-      title="Gabriel Siedler"
-      subtitle="Full Stack Web Developer"
-      backgroundImage="/static/images/me.png"
-      maskColor="rgba(25,65,86,0.7)"
+      title="Clients"
+      backgroundImage="/static/images/clients.png"
+      maskColor="rgba(0, 0, 0, 0.6)"
     />
     <Content>
       test

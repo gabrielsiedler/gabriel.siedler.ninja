@@ -20,6 +20,10 @@ export const MenuLink = styled.a`
   border-bottom: 2px solid transparent;
   transition: border 0.5s;
 
+  ${({ isActive }) => isActive && `
+    border-bottom: 2px solid white;
+  `}
+
   &:hover {
     border-bottom: 2px solid white;
     transition: border 0.5s;

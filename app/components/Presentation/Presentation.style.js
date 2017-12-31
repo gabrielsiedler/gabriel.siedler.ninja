@@ -36,6 +36,7 @@ export const Title = styled.div`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  font-family: Montserrat;
 
   @media (min-width: 900px) {
     position: fixed;
@@ -54,6 +55,7 @@ export const Title = styled.div`
   }
 
   h4 {
+    margin-left: 7px;
     text-transform: uppercase;
     font-size: 14px;
 

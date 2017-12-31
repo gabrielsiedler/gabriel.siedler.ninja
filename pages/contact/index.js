@@ -12,10 +12,9 @@ const Contact = () => (
       <meta type="description" content="" />
     </Head>
     <Presentation
-      title="Gabriel Siedler"
-      subtitle="Full Stack Web Developer"
-      backgroundImage="/static/images/me.png"
-      maskColor="rgba(25,65,86,0.7)"
+      title="Contact"
+      backgroundImage="/static/images/raven.jpg"
+      maskColor="rgba(158, 158, 158, 0.4)"
     />
     <Content>
       contact
