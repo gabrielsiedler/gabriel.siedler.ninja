@@ -18,7 +18,7 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
-  font-size: 35px;
+  font-size: 30px;
   line-height: 40px;
   margin: 70px 0 20px;
   font-family: Montserrat;

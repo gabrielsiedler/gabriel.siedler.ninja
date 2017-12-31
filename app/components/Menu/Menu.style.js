@@ -1,11 +1,21 @@
 import styled from 'styled-components';
 
 export const MenuContainer = styled.div`
-  position: fixed;
   bottom: 0;
-  width: 50%;
   text-align: center;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-evenly;
+  position: absolute;
+  width: 100%;
+
+  @media (min-width: 900px) {
+    position: fixed;
+    max-width: 30%;
+    margin: 0 auto 20px;
+    left: 25%;
+    transform: translateX(-50%);
+  }
 `;
 
 export const MenuLink = styled.a`

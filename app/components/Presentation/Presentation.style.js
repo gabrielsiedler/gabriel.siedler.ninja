@@ -5,7 +5,7 @@ export const PresentationContainer = styled.div`
   display: flex;
   color: white;
   position: relative;
-  min-height: 800px;
+  min-height: 500px;
 
   @media (min-width: 900px) {
     height: auto;
@@ -16,10 +16,14 @@ export const FixedBackground = styled.div`
   flex: 1;
   background: ${({ image }) => `url(${image})`};
   background-attachment: fixed;
-  background-position: left;
   background-size: 100%;
 
+  @media (min-width: 420px) {
+    background-position: -5%;
+  }
+
   @media (min-width: 900px) {
+    background-position: left;
     background-size: 50%;
   }
 `;
@@ -34,30 +38,49 @@ export const Mask = styled.div`
 export const Title = styled.div`
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 25%;
+  transform: translate(-50%, -25%);
   font-family: Montserrat;
+  width: 200px;
+
+  @media (min-width: 500px) {
+    width: 500px;
+  }
 
   @media (min-width: 900px) {
+    width: auto;
     position: fixed;
     left: 25%;
+    top: 50%;
     transform: translate(-50%, -25%);
+    max-width: 45%;
   }
 
   h1 {
-    font-size: 65px;
-    line-height: 70px;
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+
+    @media (min-width: 480px) {
+      font-size: 65px;
+      line-height: 70px;
+    }
 
     @media (min-width: 900px) {
       font-size: 80px;
-      line-height: 100px;
+      line-height: 80px;
     }
   }
 
   h4 {
-    margin-left: 7px;
+    text-align: center;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 12px;
+    margin-top: 5px;
+
+    @media (min-width: 480px) {
+      margin-top: 7px;
+    }
 
     @media (min-width: 900px) {
       font-size: 16px;
