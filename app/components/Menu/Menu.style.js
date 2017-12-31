@@ -29,6 +29,7 @@ export const MenuLink = styled.a`
   padding-bottom: 3px;
   border-bottom: 2px solid transparent;
   transition: border 0.5s;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 
   ${({ isActive }) => isActive && `
     border-bottom: 2px solid white;

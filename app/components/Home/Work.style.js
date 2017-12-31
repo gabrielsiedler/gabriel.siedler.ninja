@@ -8,13 +8,15 @@ export const ImagesBox = styled.div`
 export const ImageLink = styled.a`
   display: block;
   width: 50%;
+  transition: opacity 0.5s;
 
   :first-child {
     padding-left: 20px;
   }
 
   &:hover {
-    opacity: 0.8;
+    opacity: 0.5;
+    transition: opacity 0.5s;
   }
 `;
 

@@ -14,7 +14,7 @@ const Contact = () => (
     <Presentation
       title="Contact"
       backgroundImage="/static/images/raven.jpg"
-      maskColor="rgba(158, 158, 158, 0.4)"
+      maskColor="rgba(158, 158, 158, 0.7)"
     />
     <Content>
       contact

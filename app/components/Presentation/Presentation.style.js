@@ -41,14 +41,8 @@ export const Title = styled.div`
   top: 25%;
   transform: translate(-50%, -25%);
   font-family: Montserrat;
-  width: 200px;
-
-  @media (min-width: 500px) {
-    width: 500px;
-  }
 
   @media (min-width: 900px) {
-    width: auto;
     position: fixed;
     left: 25%;
     top: 50%;
@@ -60,6 +54,7 @@ export const Title = styled.div`
     text-align: center;
     font-size: 60px;
     line-height: 60px;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.5);
 
     @media (min-width: 480px) {
       font-size: 65px;
