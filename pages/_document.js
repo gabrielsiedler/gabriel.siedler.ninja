@@ -16,6 +16,7 @@ export default class MyDocument extends Document {
       <html lang="en">
         <Head>
           <title>Gabriel Siedler</title>
+          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <link href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400" rel="stylesheet" />
           <link rel="icon" type="image/png" href="/static/images/favicon.png" />
           {this.props.styleTags}

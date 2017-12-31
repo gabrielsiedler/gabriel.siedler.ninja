@@ -6,7 +6,12 @@ export const ContentContainer = styled.div`
 `;
 
 export const Data = styled.div`
-  padding: 40px 50px;
+  overflow: hidden;
+  padding: 20px 30px;
+
+  @media (min-width: 480px) {
+    padding: 40px 50px;
+  }
 
   @media (min-width: 1150px) {
     padding: 50px 75px;

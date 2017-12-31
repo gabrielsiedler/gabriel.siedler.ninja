@@ -1,10 +1,19 @@
 import Link from 'next/link';
 
 import { P, H3, A } from './Content.style';
+import { ImagesBox, ImageLink, Image } from './Work.style';
 
 const Work = () => (
   <div>
     <H3>Work</H3>
+    <ImagesBox>
+      <ImageLink href="https://ae.studio" target="_blank">
+        <Image alt="Agency Enterprise" src="/static/images/companies/aestudio-logo-light.svg" />
+      </ImageLink>
+      <ImageLink href="https://www.toptal.com" target="_blank">
+        <Image alt="Toptal" src="/static/images/companies/full_logo.svg" />
+      </ImageLink>
+    </ImagesBox>
     <P>
       Currently I{"'"}m a remote worker for{' '}
       <A href="https://ae.studio" target="_blank">
