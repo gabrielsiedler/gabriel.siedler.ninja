@@ -4,19 +4,16 @@ import { MenuContainer, MenuLink } from './Menu.style';
 
 const Menu = () => (
   <MenuContainer>
-    <Link href="/home" as="/">
+    <Link href="/home" as="/" passHref>
       <MenuLink>About Me</MenuLink>
     </Link>
-    <Link href="/agency-enterprise">
-      <MenuLink>Agency Enterprise</MenuLink>
+    <Link href="/work" passHref>
+      <MenuLink>Work</MenuLink>
     </Link>
-    <Link href="/toptal">
-      <MenuLink>Toptal</MenuLink>
-    </Link>
-    <Link href="/clients">
+    <Link href="/clients" passHref>
       <MenuLink>Clients</MenuLink>
     </Link>
-    <Link href="/contact">
+    <Link href="/contact" passHref>
       <MenuLink>Contact</MenuLink>
     </Link>
   </MenuContainer>

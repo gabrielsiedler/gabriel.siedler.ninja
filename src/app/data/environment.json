@@ -1,0 +1,132 @@
+[
+  {
+    "image": {
+      "alt": "Mac OS",
+      "src": "static/images/techs/mac.png"
+    },
+    "description": {
+      "name": "MacOs",
+      "text": "as operating system"
+    }
+  },
+  {
+    "image": {
+      "alt": "Visual Studio Code",
+      "src": "static/images/techs/vscode.png"
+    },
+    "description": {
+      "name": "Visual Studio Code",
+      "text": "as code editor"
+    }
+  },
+  {
+    "image": {
+      "alt": "GitHub",
+      "src": "static/images/techs/github.png"
+    },
+    "description": {
+      "name": "GitHub",
+      "text": "as Git version control"
+    }
+  },
+  {
+    "image": {
+      "alt": "SmartGit",
+      "src": "static/images/techs/smartgit.png"
+    },
+    "description": {
+      "name": "SmartGit",
+      "text": "as Git client"
+    }
+  },
+  {
+    "image": {
+      "alt": "MongoDB",
+      "src": "static/images/techs/mongodb.png"
+    },
+    "description": {
+      "name": "MongoDB",
+      "text": "as main database"
+    }
+  },
+  {
+    "image": {
+      "alt": "Robo 3T",
+      "src": "static/images/techs/robo3t.png"
+    },
+    "description": {
+      "name": "Robo 3T",
+      "text": "as GUI for MongoDB"
+    }
+  },
+  {
+    "image": {
+      "alt": "Docker",
+      "src": "static/images/techs/docker.svg"
+    },
+    "description": {
+      "name": "Docker",
+      "text": "as development plarform"
+    }
+  },
+  {
+    "image": {
+      "alt": "Heroku",
+      "src": "static/images/techs/heroku.svg"
+    },
+    "description": {
+      "name": "Heroku",
+      "text": "as cloud platform"
+    }
+  },
+  {
+    "image": {
+      "alt": "JavaScript",
+      "src": "static/images/techs/js.png"
+    },
+    "description": {
+      "name": "JavaScript",
+      "text": "as preferred language"
+    }
+  },
+  {
+    "image": {
+      "alt": "Node.js",
+      "src": "static/images/techs/node.png"
+    },
+    "description": {
+      "name": "Node.js",
+      "text": "as preferred back-end runtime"
+    }
+  },
+  {
+    "image": {
+      "alt": "React",
+      "src": "static/images/techs/react.png"
+    },
+    "description": {
+      "name": "React",
+      "text": "as main JS library"
+    }
+  },
+  {
+    "image": {
+      "alt": "Redux",
+      "src": "static/images/techs/redux.png"
+    },
+    "description": {
+      "name": "Redux",
+      "text": "as state container for JS"
+    }
+  },
+  {
+    "image": {
+      "alt": "Styled Components",
+      "src": "static/images/techs/styled-components.png"
+    },
+    "description": {
+      "name": "Styled Components",
+      "text": "as preferred CSS in JS"
+    }
+  }
+]

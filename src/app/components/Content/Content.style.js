@@ -6,5 +6,5 @@ export const ContentContainer = styled.div`
 `;
 
 export const Data = styled.div`
-  padding: 50px 100px;
+  padding: 50px 75px;
 `;
