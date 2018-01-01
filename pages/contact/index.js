@@ -10,7 +10,10 @@ const Contact = () => (
   <FlexContainer>
     <Head>
       <title>Gabriel Siedler - Contact</title>
-      <meta type="description" content="" />
+      <meta
+        type="description"
+        content="Gabriel Siedler - remote Full stack web developer personal website - Let's talk!"
+      />
     </Head>
     <Presentation
       title="Contact"

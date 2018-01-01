@@ -9,7 +9,7 @@ import { Content as HomeContent } from '../../app/components/Home';
 const Home = () => (
   <FlexContainer>
     <Head>
-      <title>Gabriel Siedler</title>
+      <title>Gabriel Siedler - Full stack web developer</title>
       <meta
         type="description"
         content="Gabriel Siedler - remote Full stack web developer personal website"
