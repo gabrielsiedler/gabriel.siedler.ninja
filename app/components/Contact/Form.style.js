@@ -7,6 +7,7 @@ export const Label = styled.label`
   text-transform: uppercase;
   font-family: Montserrat;
   color: #b8aea4;
+  ${({ smaller }) => smaller && 'width: 80%;'}
 `;
 
 export const Input = styled.input`
@@ -35,7 +36,7 @@ export const TextArea = styled.textarea`
   box-shadow: inset 0 1px 3px 0 rgba(55,55,55,0.5);
   padding: 10px 20px;
   display: block;
-  width: 80%;
+  width: calc(100% - 42px);
   line-height: 1.5;
   color: #495057;
   background-color: #fff;
@@ -69,4 +70,10 @@ export const Button = styled.button`
     background-color: white;
     transition: color 0.5s, background-color 0.5s;
   }
+`;
+
+export const Counter = styled.div`
+  text-align: right;
+  font-size: 12px;
+  margin-top: 5px;
 `;
