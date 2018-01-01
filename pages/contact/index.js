@@ -13,7 +13,7 @@ const Contact = () => (
     </Head>
     <Presentation
       title="Contact"
-      backgroundImage="/static/images/raven.jpg"
+      backgroundImage="/static/images/contact.jpg"
       maskColor="rgba(158, 158, 158, 0.7)"
     />
     <Content>

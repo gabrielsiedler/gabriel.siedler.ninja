@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-import { P, A, H3 } from './Content.style';
+import { P, H3, A } from '../Common';
 
 const More = () => (
   <div>

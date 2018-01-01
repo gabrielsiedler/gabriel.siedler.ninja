@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import { P, H3, A } from './Content.style';
 import { ImagesBox, ImageLink, Image } from './Work.style';
+import { A, P, H3 } from '../Common';
 
 const Work = () => (
   <div>

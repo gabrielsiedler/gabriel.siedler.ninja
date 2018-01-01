@@ -1,4 +1,4 @@
-import { P, H2, B } from './Content.style';
+import { P, H2, B } from '../Common';
 
 const Intro = () => (
   <div>

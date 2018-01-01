@@ -1,5 +1,17 @@
 import styled from 'styled-components';
 
+export const A = styled.a`
+  color: #51a1c3;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: normal;
+
+  :hover {
+    color: black;
+    transition: color 0.2s;
+  }
+`;
+
 export const P = styled.p`
   font-weight: 300;
   font-size: 17px;
@@ -30,16 +42,4 @@ export const H3 = styled.h3`
 
 export const B = styled.span`
   font-weight: normal;
-`;
-
-export const A = styled.a`
-  color: #51a1c3;
-  text-decoration: none;
-  transition: color 0.2s;
-  font-weight: normal;
-
-  :hover {
-    color: black;
-    transition: color 0.2s;
-  }
 `;

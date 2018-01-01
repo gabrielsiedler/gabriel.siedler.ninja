@@ -1,5 +1,5 @@
 import { EnvironmentContainer, Item, Logo, Description, B } from './Environment.style';
-import { H3, P } from './Content.style';
+import { H3, P } from '../Common';
 
 import items from '../../data/environment.json';
 

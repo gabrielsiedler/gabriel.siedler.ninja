@@ -1,5 +1,5 @@
 import { ListContainer, Item } from './List.style';
-import { H3 } from './Content.style';
+import { H3 } from '../Common';
 
 import items from '../../data/clients.json';
 
