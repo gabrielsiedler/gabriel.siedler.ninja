@@ -23,7 +23,7 @@ export default class MyDocument extends Document {
           <meta property="og:type" content="website" />
           <meta
             property="og:image"
-            content="http://http://gabriel.siedler.ninja/static/images/og.png"
+            content="http://gabriel.siedler.ninja/static/images/og.jpg"
           />
           <meta
             property="og:description"
