@@ -1,10 +1,11 @@
 import { Intro, List } from './';
+import { ClientsContainer } from './Content.style';
 
 const Content = () => (
-  <div>
+  <ClientsContainer>
     <Intro />
     <List />
-  </div>
+  </ClientsContainer>
 );
 
 export default Content;

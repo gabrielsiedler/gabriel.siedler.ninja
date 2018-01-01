@@ -14,8 +14,8 @@ const Clients = () => (
     </Head>
     <Presentation
       title="Clients"
-      backgroundImage="/static/images/clients.png"
-      maskColor="rgba(0, 0, 0, 0.8)"
+      backgroundImage="/static/images/clients.jpg"
+      maskColor="rgba(0, 0, 0, 0.5)"
     />
     <Content>
       <ClientsContent />

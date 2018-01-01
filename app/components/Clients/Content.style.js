@@ -1,5 +1,9 @@
 import styled from 'styled-components';
 
+export const ClientsContainer = styled.div`
+  margin-top: 30px;
+`;
+
 export const P = styled.p`
   font-weight: 300;
   font-size: 17px;
