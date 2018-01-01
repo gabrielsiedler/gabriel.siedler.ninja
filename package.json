@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "NODE_ENV=production next start -p $PORT",
+    "start": "NODE_ENV=production node server/server.js",
     "watch": "nodemon -w server/ server/server.js",
     "build": "next build",
     "postinstall": "npm run build"
