@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
-import { A, B, P } from '../Common';
+import { B, P } from '../Common';
+import { A } from './Intro.style';
 
 const Intro = () => (
   <div>
