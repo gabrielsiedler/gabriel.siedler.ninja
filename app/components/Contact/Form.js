@@ -20,6 +20,14 @@ class Form extends Component {
     this.onSubmit = this.onSubmit.bind(this);
   }
 
+  componentWillMount() {
+    this.setState({
+      form: {},
+      success: false,
+      error: {},
+    });
+  }
+
   onChange(field, value, max) {
     if (value && value.length > max) {
       return;
@@ -52,8 +60,15 @@ class Form extends Component {
       loading: true,
     });
 
-    axios.post('/api/contact', {
-      form,
+    axios({
+      method: 'post',
+      url: '/api/contact',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      data: {
+        form,
+      },
     })
       .then(() => {
         this.setState({
@@ -72,7 +87,9 @@ class Form extends Component {
   }
 
   render() {
-    const { form, loading, error, success } = this.state;
+    const {
+      form, loading, error, success,
+    } = this.state;
     const { subject = '', email = '', message = '' } = form;
 
     return (
@@ -114,7 +131,11 @@ class Form extends Component {
         <Button type="button" disabled={loading} onClick={() => this.onSubmit()}>
           {loading && <Spinner>c</Spinner>} Send
         </Button>
-        {error.hasError && <Error><B>Error:</B> {error.error}</Error>}
+        {error.hasError && (
+          <Error>
+            <B>Error:</B> {error.error}
+          </Error>
+        )}
         {success && <Feedback>Your message has been sent! Thank you.</Feedback>}
       </form>
     );
