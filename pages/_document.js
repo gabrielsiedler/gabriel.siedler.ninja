@@ -21,6 +21,7 @@ export default class MyDocument extends Document {
           <meta property="og:url" content="http://gabriel.siedler.ninja" />
           <meta property="og:site_name" content="Gabriel Siedler Personal Website" />
           <meta property="og:type" content="website" />
+          <meta property="og:image" content="http://http://gabriel.siedler.ninja/static/images/og.png" />
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400"
             rel="stylesheet"
