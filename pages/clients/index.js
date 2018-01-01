@@ -4,6 +4,7 @@ import Head from 'next/head';
 import { Presentation } from '../../app/components/Presentation';
 import { Content } from '../../app/components/Content';
 import { FlexContainer } from '../../app/components/Common';
+import { Content as ClientsContent } from '../../app/components/Clients';
 
 const Clients = () => (
   <FlexContainer>
@@ -17,7 +18,7 @@ const Clients = () => (
       maskColor="rgba(0, 0, 0, 0.8)"
     />
     <Content>
-      test
+      <ClientsContent />
     </Content>
   </FlexContainer>
 );
