@@ -7,7 +7,10 @@ export const Label = styled.label`
   text-transform: uppercase;
   font-family: Montserrat;
   color: #b8aea4;
-  ${({ smaller }) => smaller && 'width: 80%;'};
+
+  @media (min-width: 480px) {
+    ${({ smaller }) => smaller && 'width: 80%;'};
+  }
 `;
 
 export const Input = styled.input`
