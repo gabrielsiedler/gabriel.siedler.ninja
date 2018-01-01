@@ -57,7 +57,7 @@ injectGlobal`
     font-family: Roboto;
   }
 
-  body > div:first-child,
+  body > div:first-of-type,
   #__next,
   #__next > div {
     display: flex;

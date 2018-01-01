@@ -1,6 +1,8 @@
 import React from 'react';
 import Head from 'next/head';
 
+import GAWrapper from '../../app/components/GAWrapper';
+
 import { Presentation } from '../../app/components/Presentation';
 import { Content } from '../../app/components/Content';
 import { FlexContainer } from '../../app/components/Common';
@@ -26,4 +28,4 @@ const Contact = () => (
   </FlexContainer>
 );
 
-export default Contact;
+export default GAWrapper(Contact);
