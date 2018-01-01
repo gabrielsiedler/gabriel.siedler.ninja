@@ -1,0 +1,92 @@
+[
+  {
+    "image": "static/images/clients/ae.png",
+    "name": "Agency Enterprise",
+    "link": "https://ae.studio"
+  },
+  {
+    "image": "static/images/clients/toptal.png",
+    "name": "Toptal",
+    "link": "https://www.toptal.com"
+  },
+  {
+    "image": "static/images/clients/qualcomm.png",
+    "name": "Qualcomm",
+    "link": "https://www.qualcomm.com/"
+  },
+  {
+    "image": "static/images/clients/tribal.png",
+    "name": "Tribal",
+    "link": "https://www.tribalgroup.com/"
+  },
+  {
+    "image": "static/images/clients/enjoy.png",
+    "name": "Enjoy",
+    "link": "https://www.enjoy.com/"
+  },
+  {
+    "image": "static/images/clients/marmon.png",
+    "name": "The Marmon Group",
+    "link": "http://www.marmon.com/"
+  },
+  {
+    "image": "static/images/clients/dvn.png",
+    "name": "Draper Venture Network",
+    "link": "https://www.drapernetwork.com/"
+  },
+  {
+    "image": "static/images/clients/ritual.png",
+    "name": "Ritual",
+    "link": "https://ritual.com/"
+  },
+  {
+    "image": "static/images/clients/sebrae.png",
+    "name": "Sebrae",
+    "link": "http://www.sebrae.com.br"
+  },
+  {
+    "image": "static/images/clients/boticario.png",
+    "name": "O Boticário",
+    "link": "http://www.boticario.com.br/"
+  },
+  {
+    "image": "static/images/clients/bravi.png",
+    "name": "Bravi Software",
+    "link": "http://www.bravi.com.br/"
+  },
+  {
+    "image": "static/images/clients/dot.png",
+    "name": "DOT Digital Group",
+    "link": "http://dotgroup.com.br/"
+  },
+  {
+    "image": "static/images/clients/simsushare.png",
+    "name": "SimsUShare",
+    "link": "https://simsushare.com/"
+  },
+  {
+    "image": "static/images/clients/blueshift.png",
+    "name": "Blueshift",
+    "link": "http://blueshift.cc"
+  },
+  {
+    "image": "static/images/clients/navita.png",
+    "name": "Navita",
+    "link": "http://navita.com.br/"
+  },
+  {
+    "image": "static/images/clients/resultadosdigitais.png",
+    "name": "Resultados Digitais",
+    "link": "https://resultadosdigitais.com.br/"
+  },
+  {
+    "image": "static/images/clients/undr.png",
+    "name": "UNDR",
+    "link": "http://www.undrbot.com"
+  },
+  {
+    "image": "static/images/clients/w3.png",
+    "name": "w3haus",
+    "link": "http://www.w3haus.com.br/"
+  }
+]
