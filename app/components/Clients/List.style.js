@@ -16,11 +16,16 @@ export const Item = styled.a`
   margin-bottom: 20px;
   display: block;
   text-decoration: none;
-  transition: opacity 0.5s;
+  transition: opacity 0.5s, background-color 0.5s;
+  height: 120px;
+  width: 100%;
+  display: flex;
+  background-color: rgba(212, 212, 212, 0.5);
 
   :hover {
     opacity: 0.5;
-    transition: opacity 0.5s;
+    transition: opacity 0.5s, background-color 0.2s;
+    background-color: white;
   }
 
   @media (min-width: 440px) {
@@ -30,12 +35,6 @@ export const Item = styled.a`
   @media (min-width: 950px) {
     width: 30%;
   }
-`;
-
-export const Logo = styled.div`
-  height: 120px;
-  width: 100%;
-  display: flex;
 
   img {
     max-width: 100px;
