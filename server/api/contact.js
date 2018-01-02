@@ -1,5 +1,4 @@
 const express = require('express');
-const bugsnag = require('bugsnag');
 
 const ContactLib = require('../lib/contact');
 
