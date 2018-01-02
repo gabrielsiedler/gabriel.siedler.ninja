@@ -1,5 +1,6 @@
 const express = require('express');
 const next = require('next');
+const bugsnag = require('bugsnag');
 
 const api = require('./api');
 const routes = require('./routes');
@@ -14,6 +15,8 @@ app
   .prepare()
   .then(() => {
     const server = express();
+
+    bugsnag.register(process.env.BUGSNAG_KEY);
 
     server.use('/api', api);
     server.get('*', routes(app));

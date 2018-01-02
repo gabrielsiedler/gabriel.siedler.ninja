@@ -1,4 +1,5 @@
 const express = require('express');
+const bugsnag = require('bugsnag');
 
 const ContactLib = require('../lib/contact');
 
@@ -21,7 +22,7 @@ router.post('/', (req, res) => {
     .then(() => res.sendStatus(200))
     .catch((e) => {
       console.log('Contact API error:', e); // eslint-disable-line no-console
-      res.sendStatus(400);
+      res.sendStatus(200);
     });
 });
 

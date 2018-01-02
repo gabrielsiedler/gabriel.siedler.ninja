@@ -12,6 +12,7 @@
   "dependencies": {
     "axios": "^0.17.1",
     "babel-plugin-styled-components": "^1.4.0",
+    "bugsnag": "^2.0.1",
     "express": "^4.16.2",
     "mailgun-js": "^0.14.0",
     "next": "^4.2.1",
