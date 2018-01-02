@@ -4,6 +4,12 @@ const bugsnag = require('bugsnag');
 
 const ValidateContact = require('../../shared/validation/contactForm');
 
+const printEmail = data => console.log`
+  \tfrom: ${data.from}\n
+  \tsubject: ${data.subject}\n
+  \tmessage: ${data.text}
+`;
+
 class ContactLib {
   constructor(fields) {
     this.fields = fields;
@@ -20,17 +26,13 @@ class ContactLib {
     const data = {
       from: email,
       to: 'gabrielsiedler@gmail.com',
-      subject,
+      subject: `gs.ninja (${subject})`,
       text: message,
     };
 
     if (!MAILGUN_KEY) {
-      console.log(`
-        No mailgun keys provided. The following email won't be sent: \n\n
-        \tfrom: ${data.from}\n
-        \tsubject: ${data.subject}\n
-        \tmessage: ${data.text}
-      `);
+      console.log('No mailgun key provided.');
+      printEmail(data);
       return;
     }
 
@@ -40,14 +42,10 @@ class ContactLib {
     });
 
     await MailGunClient.messages().send(data, (error) => {
-      console.log(`
-        Sending email: \n\n
-        \tfrom: ${data.from}\n
-        \tsubject: ${data.subject}\n
-        \tmessage: ${data.text}
-      `);
+      printEmail(data);
 
       if (error) {
+        console.log(`Mailgun error: ${error}`);
         bugsnag.notify(`Mailgun error: ${error}`);
       }
     });
