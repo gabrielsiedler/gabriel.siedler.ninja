@@ -1,5 +1,6 @@
 /* eslint-disable no-console */
 const mailgun = require('mailgun-js');
+const bugsnag = require('bugsnag');
 
 const ValidateContact = require('../../shared/validation/contactForm');
 
@@ -47,7 +48,7 @@ class ContactLib {
       `);
 
       if (error) {
-        throw new Error(`Mailgun error: ${error}`);
+        bugsnag.notify(`Mailgun error: ${error}`);
       }
     });
   }
