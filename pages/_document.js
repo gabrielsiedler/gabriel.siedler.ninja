@@ -27,7 +27,7 @@ export default class MyDocument extends Document {
           />
           <meta
             property="og:description"
-            content="Olá!\nI am Gabriel Siedler, a full stack web developer from Brazil."
+            content="Olá! I am Gabriel Siedler, a full stack web developer from Brazil."
           />
           <link
             href="https://fonts.googleapis.com/css?family=Montserrat|Roboto:300,400"
