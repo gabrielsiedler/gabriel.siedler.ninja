@@ -13,7 +13,7 @@ const Clients = () => (
     <Head>
       <title>Gabriel Siedler - Clients</title>
       <meta
-        type="description"
+        name="description"
         content="Gabriel Siedler - remote Full stack web developer personal website - Clients"
       />
     </Head>

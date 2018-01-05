@@ -13,7 +13,7 @@ const Contact = () => (
     <Head>
       <title>Gabriel Siedler - Contact</title>
       <meta
-        type="description"
+        name="description"
         content="Gabriel Siedler - remote Full stack web developer personal website - Let's talk!"
       />
     </Head>

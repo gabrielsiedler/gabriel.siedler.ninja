@@ -17,16 +17,13 @@ export default class MyDocument extends Document {
         <Head>
           <title>Gabriel Siedler</title>
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-          <meta property="og:title" content="Gabriel Siedler - Full stack web developer" />
-          <meta property="og:url" content="http://gabriel.siedler.ninja" />
-          <meta property="og:site_name" content="Gabriel Siedler Personal Website" />
-          <meta property="og:type" content="website" />
+          <meta name="og:title" content="Gabriel Siedler - Full stack web developer" />
+          <meta name="og:url" content="http://gabriel.siedler.ninja" />
+          <meta name="og:site_name" content="Gabriel Siedler Personal Website" />
+          <meta name="og:type" content="website" />
+          <meta name="og:image" content="http://gabriel.siedler.ninja/static/images/og.jpg" />
           <meta
-            property="og:image"
-            content="http://gabriel.siedler.ninja/static/images/og.jpg"
-          />
-          <meta
-            property="og:description"
+            name="og:description"
             content="Olá! I am Gabriel Siedler, a full stack web developer from Brazil."
           />
           <link
