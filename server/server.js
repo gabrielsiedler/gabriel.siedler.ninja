@@ -1,6 +1,7 @@
 const express = require('express');
 const next = require('next');
 const bugsnag = require('bugsnag');
+const path = require('path');
 
 const api = require('./api');
 const routes = require('./routes');
@@ -17,6 +18,9 @@ app
     const server = express();
 
     bugsnag.register(process.env.BUGSNAG_KEY);
+
+    server.get('/robots.txt', (req, res) => res.sendFile(path.join(__dirname, '../static/robots.txt')));
+    server.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, '../static/sitemap.xml')));
 
     server.use('/api', api);
     server.get('*', routes(app));
