@@ -2,6 +2,7 @@ const express = require('express');
 const next = require('next');
 const bugsnag = require('bugsnag');
 const path = require('path');
+const sslRedirect = require('heroku-ssl-redirect');
 
 const api = require('./api');
 const routes = require('./routes');
@@ -17,6 +18,10 @@ app
   .then(() => {
     const server = express();
 
+    if (!dev) {
+      server.use(sslRedirect());
+    }
+
     bugsnag.register(process.env.BUGSNAG_KEY);
 
     server.get('/robots.txt', (req, res) => res.sendFile(path.join(__dirname, '../static/robots.txt')));
@@ -29,6 +34,7 @@ app
     server.listen(port, (err) => {
       if (err) throw err;
       console.log(`> Ready on http://localhost:${port}`); // eslint-disable-line no-console
+      console.log(`> Environment: ${process.env.NODE_ENV || 'development'}\n`); // eslint-disable-line no-console
     });
   })
   .catch((ex) => {
