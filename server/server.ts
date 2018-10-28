@@ -3,7 +3,6 @@ import express from 'express'
 import next from 'next'
 import * as path from 'path'
 import { api } from './api'
-import { routes } from './routes'
 
 const isProduction = process.env.NODE_ENV === 'production'
 const app = next({ dev: !isProduction })
@@ -24,13 +23,12 @@ app
     server.get('/sitemap.xml', (req, res) => res.sendFile(path.join(__dirname, '../static/sitemap.xml')))
 
     server.use('/api', api)
-    server.get('*', routes(app))
     server.get('*', (req, res) => handle(req, res))
 
     server.listen(port, (err) => {
       if (err) throw err
-      console.info(`> Ready on http://localhost:${port}`)
-      console.info(`> Environment: ${process.env.NODE_ENV || 'development'}\n`)
+      console.info(`|> Ready on http://localhost:${port}`)
+      console.info(`|> Environment: ${process.env.NODE_ENV || 'development'}\n`)
     })
   })
   .catch((ex) => {
