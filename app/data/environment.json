@@ -31,32 +31,22 @@
   },
   {
     "image": {
-      "alt": "SmartGit",
-      "src": "static/images/techs/smartgit.png"
+      "alt": "PostgreSQL",
+      "src": "static/images/techs/postgres.png"
     },
     "description": {
-      "name": "SmartGit",
-      "text": "as Git client"
-    }
-  },
-  {
-    "image": {
-      "alt": "MongoDB",
-      "src": "static/images/techs/mongodb.png"
-    },
-    "description": {
-      "name": "MongoDB",
+      "name": "PostgreSQL",
       "text": "as main database"
     }
   },
   {
     "image": {
-      "alt": "Robo 3T",
-      "src": "static/images/techs/robo3t.png"
+      "alt": "TeamSQL",
+      "src": "static/images/techs/teamsql.png"
     },
     "description": {
-      "name": "Robo 3T",
-      "text": "as GUI for MongoDB"
+      "name": "TeamSQL",
+      "text": "as SQL client"
     }
   },
   {
@@ -66,16 +56,16 @@
     },
     "description": {
       "name": "Docker",
-      "text": "as development plarform"
+      "text": "as development platform"
     }
   },
   {
     "image": {
-      "alt": "Heroku",
-      "src": "static/images/techs/heroku.svg"
+      "alt": "AWS",
+      "src": "static/images/techs/aws.png"
     },
     "description": {
-      "name": "Heroku",
+      "name": "AWS",
       "text": "as cloud platform"
     }
   },
@@ -87,6 +77,16 @@
     "description": {
       "name": "JavaScript",
       "text": "as preferred language"
+    }
+  },
+  {
+    "image": {
+      "alt": "TypeScript",
+      "src": "static/images/techs/ts.png"
+    },
+    "description": {
+      "name": "TypeScript",
+      "text": "as JS superset"
     }
   },
   {
@@ -111,12 +111,12 @@
   },
   {
     "image": {
-      "alt": "Redux",
-      "src": "static/images/techs/redux.png"
+      "alt": "MobX",
+      "src": "static/images/techs/mobx.png"
     },
     "description": {
-      "name": "Redux",
-      "text": "as state container for JS"
+      "name": "MobX",
+      "text": "as state management for React"
     }
   },
   {

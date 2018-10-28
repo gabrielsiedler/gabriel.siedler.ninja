@@ -11,8 +11,8 @@ export const Intro = () => (
       discovering best practices and high-quality, clean code with top-notch technologies.
     </P>
     <P>
-      I have full stack experience focused on modern technologies such as React/Redux, React Native, Node.js, CSS3,
-      HTML5, Docker, PostgreSQL and MongoDB.
+      I have full stack experience focused on modern technologies such as React with MobX or Redux, React Native,
+      TypeScript, Node.js, CSS3, HTML5, Docker, PostgreSQL and MongoDB.
     </P>
   </div>
 )
