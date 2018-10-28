@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { B, P } from '../Common'
+import { B, P } from '../../Common'
 import { A } from './Intro.style'
 
 export const Intro = () => (
