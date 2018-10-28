@@ -1,5 +1,5 @@
-import items from '../../data/environment.json'
-import { H3, P } from '../Common'
+import items from '../../../data/environment.json'
+import { H3, P } from '../../Common'
 import { B, Description, EnvironmentContainer, Item, Logo } from './Environment.style'
 
 const itemsWithKeys = items.map((item, i) => ({

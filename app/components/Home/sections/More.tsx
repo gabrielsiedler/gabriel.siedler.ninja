@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { A, H3, P } from '../Common'
+import { A, H3, Italic, P } from '../../Common'
 
 export const More = () => (
   <div>
@@ -14,6 +14,15 @@ export const More = () => (
         <A>contact me</A>
       </Link>{' '}
       for more information.
+    </P>
+    <P small grey>
+      <Italic>
+        You can also look at this page's code on its{' '}
+        <A href="https://github.com/gabrielsiedler/gabriel.siedler.ninja" rel="noopener noreferrer" target="_blank">
+          repository
+        </A>
+        .
+      </Italic>
     </P>
   </div>
 )

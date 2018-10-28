@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { A, H3, P } from '../Common'
+import { A, H3, P } from '../../Common'
 import { Image, ImagesBox, ImageLink } from './Work.style'
 
 export const Work = () => (
@@ -25,8 +25,8 @@ export const Work = () => (
       , building systems from scratch to production for{' '}
       <Link href="/clients" passHref>
         <A>different clients</A>
-      </Link>{' '}
-      using mainly technologies such as Node.js(Express/Next.js), React/Redux and Styled Components.
+      </Link>
+      .
     </P>
   </div>
 )

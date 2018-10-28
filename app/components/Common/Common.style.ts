@@ -18,6 +18,9 @@ export const P = styled.p`
   line-height: 24px;
   margin-bottom: 15px;
   letter-spacing: 0.6px;
+
+  ${({ small }) => small && 'font-size: 14px'};
+  ${({ grey }) => grey && 'color: #999'};
 `
 
 export const H2 = styled.h2`
@@ -42,4 +45,8 @@ export const H3 = styled.h3`
 
 export const B = styled.span`
   font-weight: normal;
+`
+
+export const Italic = styled.span`
+  font-style: italic;
 `
