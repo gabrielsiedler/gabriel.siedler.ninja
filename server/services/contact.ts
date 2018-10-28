@@ -1,6 +1,5 @@
 import * as bugsnag from 'bugsnag'
-import * as mailgun from 'mailgun-js'
-import { validate as ValidateContact } from '../../shared/validation/contactForm'
+import mailgun from 'mailgun-js'
 
 const printEmail = (data) => console.log`
   \tfrom: ${data.from}\n
