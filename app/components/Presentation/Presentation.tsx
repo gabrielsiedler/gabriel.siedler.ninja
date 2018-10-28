@@ -6,8 +6,10 @@ interface PresentationInterface {
   subtitle?: string
   backgroundImage: string
   maskColor: string
+  currentPage: 'home' | 'clients' | 'contact'
 }
-export const Presentation = ({ title, subtitle, backgroundImage, maskColor }: PresentationInterface) => (
+
+export const Presentation = ({ title, subtitle, backgroundImage, maskColor, currentPage }: PresentationInterface) => (
   <PresentationContainer>
     <FixedBackground image={backgroundImage} />
     <Mask color={maskColor} />
@@ -17,6 +19,6 @@ export const Presentation = ({ title, subtitle, backgroundImage, maskColor }: Pr
         <h4>{subtitle}</h4>
       </div>
     </Title>
-    <Menu />
+    <Menu currentPage={currentPage} />
   </PresentationContainer>
 )

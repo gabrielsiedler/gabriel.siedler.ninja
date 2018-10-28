@@ -15,7 +15,12 @@ const Contact = () => (
         content="Gabriel Siedler - remote Full stack web developer personal website - Let's talk!"
       />
     </Head>
-    <Presentation title="Contact" backgroundImage="/static/images/contact.jpg" maskColor="rgba(158, 158, 158, 0.7)" />
+    <Presentation
+      title="Contact"
+      backgroundImage="/static/images/contact.jpg"
+      maskColor="rgba(158, 158, 158, 0.7)"
+      currentPage="contact"
+    />
     <Content>
       <ContactContent />
     </Content>

@@ -12,7 +12,12 @@ const Clients = () => (
       <title>Gabriel Siedler - Clients</title>
       <meta name="description" content="Gabriel Siedler - remote Full stack web developer personal website - Clients" />
     </Head>
-    <Presentation title="Clients" backgroundImage="/static/images/clients.jpg" maskColor="rgba(0, 0, 0, 0.5)" />
+    <Presentation
+      title="Clients"
+      backgroundImage="/static/images/clients.jpg"
+      maskColor="rgba(0, 0, 0, 0.5)"
+      currentPage="clients"
+    />
     <Content>
       <ClientsContent />
     </Content>
