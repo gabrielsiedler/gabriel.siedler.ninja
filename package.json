@@ -6,11 +6,12 @@
   "license": "MIT",
   "scripts": {
     "start": "NODE_ENV=production node server/server.js",
-    "watch": "nodemon server/server.js",
+    "watch": "ts-node server/server.ts",
     "build": "NODE_ENV=production next build",
     "postinstall": "npm run build"
   },
   "dependencies": {
+    "@types/node": "^10.12.0",
     "@zeit/next-typescript": "^1.1.1",
     "axios": "^0.18.0",
     "bugsnag": "^2.0.1",
@@ -23,7 +24,8 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-ga": "^2.4.0",
-    "styled-components": "^4.0.2"
+    "styled-components": "^4.0.2",
+    "ts-node": "^7.0.1"
   },
   "devDependencies": {
     "babel-plugin-styled-components": "^1.8.0",
@@ -32,6 +34,8 @@
     "eslint-plugin-import": "^2.8.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.5.1",
-    "nodemon": "^1.18.5"
+    "nodemon": "^1.18.5",
+    "tslint-config-prettier": "^1.15.0",
+    "tslint-consistent-codestyle": "^1.13.3"
   }
 }

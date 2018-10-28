@@ -1,23 +1,23 @@
-import { Component } from 'react';
-import axios from 'axios';
+import { Component } from 'react'
+import axios from 'axios'
 
-import ValidateContact from '../../../shared/validation/contactForm';
+import { validate as ValidateContact } from '../../../shared/validation/contactForm'
 
-import { Label, Input, TextArea, Button, Counter, Spinner, Error, Feedback } from './Form.style';
-import { B, H3 } from '../Common';
+import { Label, Input, TextArea, Button, Counter, Spinner, Error, Feedback } from './Form.style'
+import { B, H3 } from '../Common'
 
 class Form extends Component {
   constructor(props) {
-    super(props);
+    super(props)
 
     this.state = {
       loading: false,
       form: {},
       error: {},
-    };
+    }
 
-    this.onChange = this.onChange.bind(this);
-    this.onSubmit = this.onSubmit.bind(this);
+    this.onChange = this.onChange.bind(this)
+    this.onSubmit = this.onSubmit.bind(this)
   }
 
   componentWillMount() {
@@ -25,12 +25,12 @@ class Form extends Component {
       form: {},
       success: false,
       error: {},
-    });
+    })
   }
 
   onChange(field, value, max) {
     if (value && value.length > max) {
-      return;
+      return
     }
 
     this.setState({
@@ -38,27 +38,27 @@ class Form extends Component {
         ...this.state.form,
         [field]: value,
       },
-    });
+    })
   }
 
   onSubmit() {
-    const { form } = this.state;
+    const { form } = this.state
 
-    const error = ValidateContact(form);
+    const error = ValidateContact(form)
 
     if (error.hasError) {
       this.setState({
         error,
         success: false,
-      });
+      })
 
-      return;
+      return
     }
 
     this.setState({
       error,
       loading: true,
-    });
+    })
 
     axios({
       method: 'post',
@@ -75,36 +75,40 @@ class Form extends Component {
           loading: false,
           success: true,
           form: {},
-        });
+        })
       })
       .catch((responseError) => {
         this.setState({
           error: responseError,
           loading: false,
           success: false,
-        });
-      });
+        })
+      })
   }
 
   render() {
-    const {
-      form, loading, error, success,
-    } = this.state;
-    const { subject = '', email = '', message = '' } = form;
+    const { form, loading, error, success } = this.state
+    const { subject = '', email = '', message = '' } = form
 
     return (
       <form>
-        <H3>Let{"'"}s talk</H3>
+        <H3>
+          Let
+          {"'"}s talk
+        </H3>
         <Label htmlFor="subject">
           Subject
           <Input
             type="text"
             disabled={loading}
             value={subject}
-            onChange={e => this.onChange(e.target.id, e.target.value, 40)}
+            onChange={(e) => this.onChange(e.target.id, e.target.value, 40)}
             id="subject"
           />
-          <Counter>{subject.length}/40</Counter>
+          <Counter>
+            {subject.length}
+            /40
+          </Counter>
         </Label>
         <Label htmlFor="email">
           Email
@@ -112,10 +116,13 @@ class Form extends Component {
             type="email"
             disabled={loading}
             value={email}
-            onChange={e => this.onChange(e.target.id, e.target.value, 80)}
+            onChange={(e) => this.onChange(e.target.id, e.target.value, 80)}
             id="email"
           />
-          <Counter>{email.length}/80</Counter>
+          <Counter>
+            {email.length}
+            /80
+          </Counter>
         </Label>
         <Label htmlFor="message" smaller>
           Message
@@ -123,10 +130,13 @@ class Form extends Component {
             id="message"
             value={message}
             disabled={loading}
-            onChange={e => this.onChange(e.target.id, e.target.value, 500)}
+            onChange={(e) => this.onChange(e.target.id, e.target.value, 500)}
             rows="5"
           />
-          <Counter>{message.length}/500</Counter>
+          <Counter>
+            {message.length}
+            /500
+          </Counter>
         </Label>
         <Button type="button" disabled={loading} onClick={() => this.onSubmit()}>
           {loading && <Spinner>c</Spinner>} Send
@@ -138,8 +148,8 @@ class Form extends Component {
         )}
         {success && <Feedback>Your message has been sent! Thank you.</Feedback>}
       </form>
-    );
+    )
   }
 }
 
-export default Form;
+export default Form
