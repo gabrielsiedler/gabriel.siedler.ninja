@@ -29,6 +29,8 @@
     "ts-node": "^7.0.1"
   },
   "devDependencies": {
+    "@types/react": "^16.4.18",
+    "@types/react-dom": "^16.0.9",
     "babel-plugin-styled-components": "^1.8.0",
     "eslint": "^5.8.0",
     "eslint-config-airbnb": "^17.1.0",

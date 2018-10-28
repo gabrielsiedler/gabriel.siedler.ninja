@@ -5,7 +5,9 @@
     "noImplicitAny": false,
     "sourceMap": true,
     "experimentalDecorators": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true
   },
   "exclude": ["node_modules"]
 }
