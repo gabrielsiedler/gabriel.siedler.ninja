@@ -1,13 +1,13 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const PresentationContainer = styled.div`
-  flex: 1;
   display: flex;
   color: white;
   position: relative;
   min-height: 500px;
 
   @media (min-width: 900px) {
+    flex: 1;
     height: auto;
   }
 `;

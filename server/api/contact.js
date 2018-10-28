@@ -1,10 +1,10 @@
-const express = require('express');
+const express = require("express");
 
-const ContactLib = require('../lib/contact');
+const ContactLib = require("../lib/contact");
 
 const router = express.Router();
 
-router.post('/', (req, res) => {
+router.post("/", (req, res) => {
   const { form } = req.body;
 
   const Contact = new ContactLib(form);
@@ -16,11 +16,10 @@ router.post('/', (req, res) => {
     return;
   }
 
-  Contact
-    .sendEmail()
+  Contact.sendEmail()
     .then(() => res.sendStatus(200))
-    .catch((e) => {
-      console.log('Contact API error:', e); // eslint-disable-line no-console
+    .catch(e => {
+      console.log("Contact API error:", e); // eslint-disable-line no-console
       res.sendStatus(200);
     });
 });
