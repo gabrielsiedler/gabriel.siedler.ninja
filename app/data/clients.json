@@ -88,5 +88,20 @@
     "image": "static/images/clients/w3.png",
     "name": "w3haus",
     "link": "http://www.w3haus.com.br/"
+  },
+  {
+    "image": "static/images/clients/bloomz.png",
+    "name": "Bloomz",
+    "link": "https://www.bloomz.net/"
+  },
+  {
+    "image": "static/images/clients/shirtapp.png",
+    "name": "Shirt App",
+    "link": "https://about.shirt.app"
+  },
+  {
+    "image": "static/images/clients/gretel.png",
+    "name": "Gretel",
+    "link": "https://www.gretelme.com/"
   }
 ]

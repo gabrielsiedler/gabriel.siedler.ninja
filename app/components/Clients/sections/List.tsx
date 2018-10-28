@@ -1,5 +1,5 @@
-import items from '../../data/clients.json'
-import { H3 } from '../Common'
+import items from '../../../data/clients.json'
+import { H3 } from '../../Common'
 import { Item, ListContainer } from './List.style'
 
 const itemsWithKeys = items.map((item, i) => ({
