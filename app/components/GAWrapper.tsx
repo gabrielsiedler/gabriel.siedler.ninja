@@ -4,6 +4,12 @@ import ReactGA from 'react-ga'
 
 const prod = process.env.NODE_ENV === 'production'
 
+declare global {
+  interface Window {
+    GA_INITIALIZED: boolean
+  }
+}
+
 export const GAWrapper = (WrappedComponent) =>
   class GaWrapper extends Component {
     lastTrackedPath: string
