@@ -8,15 +8,11 @@ const printEmail = (data) => console.log`
   \tmessage: ${data.text}
 `
 
-export class ContactLib {
+export class ContactService {
   fields: any
 
   constructor(fields) {
     this.fields = fields
-  }
-
-  validate() {
-    return ValidateContact(this.fields)
   }
 
   async sendEmail() {

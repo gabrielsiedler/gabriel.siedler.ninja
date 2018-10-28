@@ -4,7 +4,20 @@ import { validate as ValidateContact } from '../../../shared/validation/contactF
 import { B, H3 } from '../Common'
 import { Button, Counter, Error, Feedback, Input, Label, Spinner, TextArea } from './Form.style'
 
+interface formState {
+  loading: boolean
+  form: {
+    subject?: string
+    email?: string
+    message?: string
+  }
+  error: any
+  success?: boolean
+}
+
 export class Form extends Component {
+  state: formState
+
   constructor(props) {
     super(props)
 
@@ -64,9 +77,7 @@ export class Form extends Component {
       headers: {
         'Content-Type': 'application/json',
       },
-      data: {
-        form,
-      },
+      data: form,
     })
       .then(() => {
         this.setState({

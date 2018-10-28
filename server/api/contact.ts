@@ -1,25 +1,21 @@
+import { ValidationError } from 'error-middleware/errors'
+import { validationMiddleware } from 'error-middleware/middlewares'
 import express from 'express'
-import { ContactLib } from '../lib/contact'
+import { ContactService } from '../services/contact'
+import { postSchema } from './contact.schema'
 
 const router = express.Router()
 
-router.post('/', (req, res) => {
-  const { form } = req.body
+router.post('/', validationMiddleware(postSchema), (req, res) => {
+  const { subject, email, message } = req.body
 
-  const Contact = new ContactLib(form)
-
-  const validation = Contact.validate()
-
-  if (validation.hasError) {
-    res.status(400).send(validation)
-
-    return
-  }
+  const Contact = new ContactService({ subject, email, message })
 
   Contact.sendEmail()
     .then(() => res.sendStatus(200))
     .catch((e) => {
       console.log('Contact API error:', e)
+
       res.sendStatus(200)
     })
 })
