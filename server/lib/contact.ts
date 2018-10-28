@@ -31,7 +31,7 @@ export class ContactLib {
     }
 
     if (!MAILGUN_KEY) {
-      console.error('No mailgun key provided.') // tslint:disable-line:no-console
+      console.error('No mailgun key provided.')
       printEmail(data)
 
       return
@@ -46,7 +46,7 @@ export class ContactLib {
       printEmail(data)
 
       if (error) {
-        console.log(`Mailgun error: ${error}`) // tslint:disable-line:no-console
+        console.log(`Mailgun error: ${error}`)
         bugsnag.notify(`Mailgun error: ${error}`)
       }
     })

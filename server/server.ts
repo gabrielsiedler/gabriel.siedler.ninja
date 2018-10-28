@@ -29,11 +29,11 @@ app
 
     server.listen(port, (err) => {
       if (err) throw err
-      console.info(`> Ready on http://localhost:${port}`) // tslint:disable-line:no-console
-      console.info(`> Environment: ${process.env.NODE_ENV || 'development'}\n`) // tslint:disable-line:no-console
+      console.info(`> Ready on http://localhost:${port}`)
+      console.info(`> Environment: ${process.env.NODE_ENV || 'development'}\n`)
     })
   })
   .catch((ex) => {
-    console.error(ex.stack) // tslint:disable-line:no-console
+    console.error(ex.stack)
     process.exit(1)
   })

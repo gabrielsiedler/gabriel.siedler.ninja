@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
   Contact.sendEmail()
     .then(() => res.sendStatus(200))
     .catch((e) => {
-      console.log('Contact API error:', e) // tslint:disable-line:no-console
+      console.log('Contact API error:', e)
       res.sendStatus(200)
     })
 })
