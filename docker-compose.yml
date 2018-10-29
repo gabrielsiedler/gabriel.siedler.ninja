@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  site:
+    image: node:8.11.3
+    command: npm start
+    working_dir: /usr/src/gsn
+    volumes:
+      - ./:/usr/src/gsn
+    ports:
+      - 3000:3000
+    environment:
+      NODE_ENV: development
+      PORT: 3000
+      MAILGUN_KEY: 1
+      BUGSNAG_KEY: 1
