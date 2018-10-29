@@ -1,10 +1,12 @@
 import App, { Container } from 'next/app'
 import Head from 'next/head'
 import React from 'react'
-import GlobalStyle from './global.style.ts'
+import GlobalStyle from './global.style'
 
 export default class MyApp extends App {
-  static async getInitialProps({ Component, router, ctx }) {
+  props: any
+
+  static async getInitialProps({ Component, ctx }) {
     let pageProps = {}
 
     if (Component.getInitialProps) {
