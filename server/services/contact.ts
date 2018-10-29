@@ -33,7 +33,7 @@ export class ContactService {
     }
 
     const MailGunClient = mailgun({
-      apiKey: process.env.MAILGUN_KEY,
+      apiKey: MAILGUN_KEY,
       domain: 'gabriel.siedler.ninja',
     })
 
