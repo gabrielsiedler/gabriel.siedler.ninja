@@ -8,6 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production'
 const app = next({ dev: !isProduction })
 const handle = app.getRequestHandler()
 
+const host = process.env.HOST || '0.0.0.0'
 const port = process.env.PORT || 3000
 
 app
@@ -25,9 +26,9 @@ app
     server.use('/api', api)
     server.get('*', (req, res) => handle(req, res))
 
-    server.listen(port, (err) => {
+    server.listen(port, host, (err) => {
       if (err) throw err
-      console.info(`|> Ready on http://localhost:${port}`)
+      console.info(`|> Ready on http://${host}:${port}`)
       console.info(`|> Environment: ${process.env.NODE_ENV || 'development'}\n`)
     })
   })
