@@ -61,8 +61,8 @@
   },
   {
     "image": {
-      "alt": "AWS",
-      "src": "static/images/techs/aws.png"
+      "alt": "Digital Ocean",
+      "src": "static/images/techs/digital-ocean.png"
     },
     "description": {
       "name": "AWS",
