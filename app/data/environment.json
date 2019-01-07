@@ -62,10 +62,10 @@
   {
     "image": {
       "alt": "Digital Ocean",
-      "src": "static/images/techs/digital-ocean.png"
+      "src": "static/images/techs/digital-ocean.svg"
     },
     "description": {
-      "name": "AWS",
+      "name": "Digital Ocean",
       "text": "as cloud platform"
     }
   },
@@ -111,11 +111,11 @@
   },
   {
     "image": {
-      "alt": "MobX",
-      "src": "static/images/techs/mobx.png"
+      "alt": "Redux",
+      "src": "static/images/techs/redux.svg"
     },
     "description": {
-      "name": "MobX",
+      "name": "Redux",
       "text": "as state management for React"
     }
   },
